@@ -1,0 +1,6 @@
+{
+  "name": "Leap-ODD",
+  "tagline": "Repository containing the LEAP ODD (and generated output) for the Livingstone-online Enrichment and Access Project",
+  "body": "### Welcome to LEAP ODD Site.\r\n\r\nThe initial work on this was done by @jamescummings and @awisnicki.\r\n\r\n* [leap.rng](leap.rng)\r\n\r\nThis is basically a test page.\r\n  ",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
