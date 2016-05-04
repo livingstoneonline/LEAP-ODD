@@ -54,7 +54,7 @@ of this software, even if advised of the possibility of such damage.
 <xsl:param name="pageStyle">empty</xsl:param>
   
 <xsl:template priority="1000" match="tei:milestone"/>
-<xsl:template priority="1000" match="tei:pb"> \newline \newline <xsl:if test="@n">[<xsl:value-of select="@n"/>]</xsl:if></xsl:template>
+<xsl:template priority="1000" match="tei:pb"> {\newline <xsl:if test="@n">[<xsl:value-of select="@n"/>]</xsl:if>}</xsl:template>
 <xsl:template priority="1000" match="@facs"/>
 
 <xsl:template priority="1000" match="tei:geogName"><xsl:apply-templates/></xsl:template>
@@ -71,7 +71,7 @@ of this software, even if advised of the possibility of such damage.
 
 <xsl:template priority="1000" match="tei:facsimile |tei:surface/tei:graphic"/>
 
-<xsl:template priority="1000" match="tei:addrLine"> \newline <xsl:apply-templates/></xsl:template>
+<xsl:template priority="1000" match="tei:addrLine"> {\newline <xsl:apply-templates/>}</xsl:template>
 
 <xsl:template priority="1000" match="tei:p"> \par <xsl:apply-templates/></xsl:template>
    
@@ -88,10 +88,12 @@ of this software, even if advised of the possibility of such damage.
   
   <xsl:template priority="1000" match="tei:salute|tei:term|tei:unclear|tei:foreign|tei:orig|tei:sic|tei:dateline|tei:abbr"><xsl:apply-templates/></xsl:template>
   
-  <xsl:template priority="1000" match="tei:dateline[@rend='right']">{\par\begin{flushright} \hspace*{0pt}\hfill <xsl:apply-templates/> \end{flushright}</xsl:template>
+  <xsl:template priority="1000" match="tei:dateline[@rend='right']">{\par\begin{flushright} \hspace*{0pt}\hfill <xsl:apply-templates/> \end{flushright}}</xsl:template>
   
   <xsl:template priority="1000" match="tei:lb"> \newline </xsl:template>
 
+  <xsl:template priority="1000" match="tei:lb[preceding-sibling::node()[1][name()='dateline']]"/> 
+  
 
   <xsl:template name="tei:item"><xsl:text>\item</xsl:text><xsl:if test="@n">[<xsl:value-of select="@n"/>]</xsl:if><xsl:text> </xsl:text><xsl:apply-templates/></xsl:template>
   
@@ -131,9 +133,9 @@ of this software, even if advised of the possibility of such damage.
         <xsl:value-of select="ancestor-or-self::tei:TEI/tei:teiHeader/tei:fileDesc/tei:publicationStmt/tei:idno[1]"/>
       </xsl:when>
     </xsl:choose>
-    <xsl:text>\makeatother </xsl:text>
-    <xsl:text>}&#10;\def\TheDate{</xsl:text>
-    <xsl:sequence select="tei:generateDate(/*)"/>-->
+    <xsl:text>\makeatother </xsl:text>-->
+    <xsl:text>  &#10;\def\TheDate{</xsl:text>
+    <!--<xsl:sequence select="tei:generateDate(/*)"/>-->
     <xsl:text>}&#10;\title{</xsl:text>
     <xsl:choose>
       <xsl:when test="/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type='alternative']"><xsl:value-of select="/tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[@type='alternative']"/></xsl:when>
@@ -209,89 +211,5 @@ of this software, even if advised of the possibility of such damage.
 
    
    
-   
-<!-- 
-    
-DONE 1. The PDFs begin with Title and Author. I would like to add the line "Published by Livingstone Online (livingstoneonline.org)" right after that (and perhaps add more text later, but once you set this up I can edit, etc.).
-
-
-DONE 2. The file name kicks out at the end of the file, in the footer of the last page. Please remove that.
-
-
-DONE 3. On the second line of the PDF, to the far right of "David Livingstone," it is kicking out the date from the <publicationStmt><date>. Please turn this off or at least put it on its own line to the left.
-
-
-DONE 4. For each new page, put a space break before page number:
-
-Currently:
-
-the liberty of asking
-your friendly office [0002]
-for our son Robert
-
-Should be:
-
-the liberty of asking
-your friendly office 
-
-[0002]
-for our son Robert
-
-
-DONE 5. For abbr/expan show only abbr, also don't do anything special to abbr.
-
-Current:
-
-( D.) David
-
-Should be:
-
-D.
-
-Note: that in the current version, it's putting <abbr> in parenthesis and also adding a space before the abbreviated text.
-
-
-DONE 6. For sic/corr, please just show sic and don't put it in square brackets. Same for orig/reg, just show orig without italics.
-
-Current (corr): 
-
-[ until]
-
-Should be (sic):
-
-until
-
-Note: that in the current version, it's putting <corr> in square brackets and also adding a space before the corrected text.
-
-
-DONE 7. Turn off italics on <term>, <unclear>, <foreign>. No special rendering for these tags is necessary.
-
-
-8. If something is in quotation marks, the opening quotation mark is going the wrong direction. Example: liv_000893_mb_aw.pdf near the beginning of the letter.
-
-
-DONE (I think) 9. <lb> within another tag not recognized (e.g., <term>, <del>, <dateline>, perhaps others). In other words, if <lb/> is nestled within <term>, the line does not break.
-
-
-DONE, now one page10. When there is a </front> to <body> transition, it kicks in a ton of space (a number of blank pages appear between sections). Example: liv_000003_integrated_aw_cl_aw_hb-final3_hb.pdf
-
-
-DONE 11. Show the text that appears in <figDesc>
-
-
-DONE 12. After <p>, <salute>, and <item>, it kicks in a few blank lines. This is not necessary. So, for instance, when one <p> ends, the next should just begin on the next line.
-
-
-DONE 13. <p rend="no-indent"> is indenting, while <p> is not. This should be reversed.
-
-
-DONE 14. There should be a line break for <ab> and <addrLine>. Right now it just runs it onto the previous line.
-
-
-DONE 15. <app><rdg><rdg> - display only first <rdg>
-    
-    
-    -->
-    
     
 </xsl:stylesheet>
