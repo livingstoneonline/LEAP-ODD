@@ -2307,6 +2307,14 @@ This hand belongs to Charles Livingstone.</handNote>
                         <specDesc key="cell"/>
                     </specList>
                 </p>
+				<p>
+					<specList>
+						<specDesc key="def"/>
+						<specDesc key="entry"/>
+						<specDesc key="form"/>
+						<specDesc key="orth"/>
+					</specList>
+				</p>
                 <p>
                     <label>Header Module</label>
                     <specList>
@@ -2521,6 +2529,7 @@ This hand belongs to Charles Livingstone.</handNote>
                         graphic head hi imprint item label lb list listBibl measure measureGrp milestone
                         monogr name note orig p pb pubPlace publisher q quote ref reg resp respStmt
                         sic term title unclear"/>
+					<moduleRef key="dictionaries" include="def entry form orth"/>
                     <moduleRef key="figures" include="figure figDesc table row cell"/>
 
                     <moduleRef key="header"
