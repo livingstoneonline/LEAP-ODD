@@ -2274,6 +2274,7 @@ This hand belongs to Charles Livingstone.</handNote>
                         <specDesc key="label"/>
                         <specDesc key="lb"/>
                         <specDesc key="list"/>
+						<specDesc key="listBibl"/>
                         <specDesc key="measure"/>
                         <specDesc key="milestone"/>
                         <specDesc key="monogr"/>
@@ -2517,7 +2518,7 @@ This hand belongs to Charles Livingstone.</handNote>
                     <moduleRef key="core"
                         include="abbr add addrLine address author bibl biblScope
                         biblStruct cb choice corr date del desc editor expan foreign gap gb gloss
-                        graphic head hi imprint item label lb list measure measureGrp milestone
+                        graphic head hi imprint item label lb list listBibl measure measureGrp milestone
                         monogr name note orig p pb pubPlace publisher q quote ref reg resp respStmt
                         sic term title unclear"/>
                     <moduleRef key="figures" include="figure figDesc table row cell"/>
