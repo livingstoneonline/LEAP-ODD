@@ -73,27 +73,35 @@ of this software, even if advised of the possibility of such damage.
 
 <xsl:template priority="1000" match="tei:addrLine"> {\newline <xsl:apply-templates/>}</xsl:template>
 
-<xsl:template priority="1000" match="tei:p"> \par <xsl:apply-templates/></xsl:template>
+<xsl:template priority="1000" match="tei:p"> \newline <xsl:apply-templates/></xsl:template>
    
-<xsl:template priority="1000" match="tei:p[@rend='no-indent'] | tei:ab"> \par\noindent <xsl:apply-templates/> </xsl:template>
+<xsl:template priority="1000" match="tei:p[@rend='no-indent'] | tei:ab"> \newline\noindent <xsl:apply-templates/> </xsl:template>
    
 <xsl:template priority="1000" match="tei:app"><xsl:apply-templates select="tei:rdg[1]"/></xsl:template>
   
-<xsl:template priority="1000" match="tei:figDesc[text()]">[<xsl:apply-templates/>]</xsl:template>
+<xsl:template priority="1000" match="tei:figure[tei:figDesc[text()]]">[<xsl:value-of select="tei:figDesc"/>]</xsl:template>
     
   <xsl:template priority="1000" match="tei:choice[tei:orig]"><xsl:apply-templates select="tei:orig[1]"/></xsl:template>
   <xsl:template priority="1000" match="tei:choice[tei:abbr]"><xsl:apply-templates select="tei:abbr[1]"/></xsl:template>
   <xsl:template priority="1000" match="tei:choice[tei:sic]"><xsl:apply-templates select="tei:sic[1]"/></xsl:template>
-  <xsl:template priority="1000" match="tei:expan|tei:reg|tei:corr"/>
+  <xsl:template priority="1000" match="tei:expan|tei:reg|tei:corr|tei:supplied"/>
   
   <xsl:template priority="1000" match="tei:salute|tei:term|tei:unclear|tei:foreign|tei:orig|tei:sic|tei:dateline|tei:abbr"><xsl:apply-templates/></xsl:template>
   
-  <xsl:template priority="1000" match="tei:dateline[@rend='right']">{\par\begin{flushright} \hspace*{0pt}\hfill <xsl:apply-templates/> \end{flushright}}</xsl:template>
+  <xsl:template priority="1000" match="tei:del">\sout{<xsl:apply-templates />}</xsl:template>
+  
+  <xsl:template priority="1000" match="tei:del/tei:del"><xsl:apply-templates /></xsl:template>
+  
+  
+  <!--<xsl:template priority="1000" match="tei:dateline[@rend='right']">{\par\begin{flushright} \hspace*{0pt}\hfill <xsl:apply-templates/> \end{flushright}}</xsl:template>-->
   
   <xsl:template priority="1000" match="tei:lb"> \newline </xsl:template>
 
+
   <xsl:template priority="1000" match="tei:lb[preceding-sibling::node()[1][name()='dateline']]"/> 
-  
+
+
+  <xsl:template priority="1000" match="tei:fw"><xsl:apply-templates/> \newline </xsl:template>
 
   <xsl:template name="tei:item"><xsl:text>\item</xsl:text><xsl:if test="@n">[<xsl:value-of select="@n"/>]</xsl:if><xsl:text> </xsl:text><xsl:apply-templates/></xsl:template>
   
@@ -104,7 +112,7 @@ of this software, even if advised of the possibility of such damage.
   
   <xsl:template name="beginDocumentHook">{\newline Published by Livingstone Online (livingstoneonline.org)}
     \let\cleardoublepage\clearpage
-    \setlength{\parskip}{0pt} 
+    <!--\setlength{\parskip}{pt}--> 
   </xsl:template>   
 
 
@@ -147,7 +155,9 @@ of this software, even if advised of the possibility of such damage.
     <xsl:text>}</xsl:text>
     <xsl:text>\makeatletter </xsl:text>
     <xsl:call-template name="latexBegin"/>
-    <xsl:text>\makeatother </xsl:text>
+    <xsl:text>\makeatother
+    \hypersetup{pdfstartview={XYZ null null 0.75}}
+</xsl:text>
   </xsl:template>
   
 
@@ -208,6 +218,20 @@ of this software, even if advised of the possibility of such damage.
   </xsl:template>
   
 
+  <xsl:template match="tei:body" priority="1000">
+    <xsl:if test="not(ancestor::tei:floatingText) and not(preceding::tei:body) and preceding::tei:front">
+      <!--<xsl:text>\mainmatter </xsl:text>-->
+    </xsl:if>
+    <xsl:if test="count(key('APP',1))&gt;0">
+      \beginnumbering
+      \def\endstanzaextra{\pstart\centering---------\skipnumbering\pend}
+    </xsl:if>
+    <xsl:apply-templates/>
+    <xsl:if test="count(key('APP',1))&gt;0">
+      \endnumbering
+    </xsl:if>
+  </xsl:template>
+  
 
    
    
