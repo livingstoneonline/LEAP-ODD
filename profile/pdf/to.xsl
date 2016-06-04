@@ -54,8 +54,10 @@ of this software, even if advised of the possibility of such damage.
 <xsl:param name="pageStyle">empty</xsl:param>
   
 <xsl:template priority="1000" match="tei:milestone"/>
-<xsl:template priority="1000" match="tei:pb"> {\newline <xsl:if test="@n">[<xsl:value-of select="@n"/>]</xsl:if>}</xsl:template>
-<xsl:template priority="1000" match="@facs"/>
+<xsl:template priority="1000" match="tei:pb">{\newline \newline <xsl:if test="@n">[<xsl:value-of select="@n"/>]</xsl:if>}</xsl:template>
+  <xsl:template priority="1000" match="tei:del//tei:pb">}{\newline \newline <xsl:if test="@n">[<xsl:value-of select="@n"/>]</xsl:if>}\sout{</xsl:template>
+  
+  <xsl:template priority="1000" match="@facs"/>
 
 <xsl:template priority="1000" match="tei:geogName"><xsl:apply-templates/></xsl:template>
 
@@ -73,9 +75,9 @@ of this software, even if advised of the possibility of such damage.
 
 <xsl:template priority="1000" match="tei:addrLine"> {\newline <xsl:apply-templates/>}</xsl:template>
 
-<xsl:template priority="1000" match="tei:p"> \newline <xsl:apply-templates/></xsl:template>
+  <xsl:template priority="1000" match="tei:p"> <xsl:if test="not(preceding-sibling::node()[1][name()='lb'])">\newline</xsl:if> \indent <xsl:apply-templates/> </xsl:template>
    
-<xsl:template priority="1000" match="tei:p[@rend='no-indent'] | tei:ab"> \newline\noindent <xsl:apply-templates/> </xsl:template>
+<xsl:template priority="1000" match="tei:p[@rend='no-indent'] | tei:ab"> \par\noindent <xsl:apply-templates/> </xsl:template>
    
 <xsl:template priority="1000" match="tei:app"><xsl:apply-templates select="tei:rdg[1]"/></xsl:template>
   
@@ -98,11 +100,12 @@ of this software, even if advised of the possibility of such damage.
   <xsl:template priority="1000" match="tei:lb"> \newline </xsl:template>
 
 
-  <xsl:template priority="1000" match="tei:lb[preceding-sibling::node()[1][name()='dateline']]"/> 
+  <xsl:template priority="1000" match="tei:lb[preceding-sibling::node()[1][name()='dateline']|preceding-sibling::node()[1][name()='pb']]"/> 
 
 
-  <xsl:template priority="1000" match="tei:fw"><xsl:apply-templates/> \newline </xsl:template>
-
+  <xsl:template priority="1000" match="tei:fw[.//text()]"><xsl:apply-templates/> \newline</xsl:template>
+  <xsl:template priority="1000" match="tei:fw[not(.//text())]"/>
+  
   <xsl:template name="tei:item"><xsl:text>\item</xsl:text><xsl:if test="@n">[<xsl:value-of select="@n"/>]</xsl:if><xsl:text> </xsl:text><xsl:apply-templates/></xsl:template>
   
   <!--
