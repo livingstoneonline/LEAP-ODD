@@ -86,12 +86,12 @@
 	<!-- Start each page with a <pb> formatted as above -->
 
 <!-- If this is a letter or similar with an opener (with content such as dateline and/or salute) add it. For example: -->
-<opener>
-<lb/><dateline rend="right"><placeName>Hadley Green</placeName> <date when="1857-08-22">22 August<!-- Change line info as appropriate --><!-- Begin each line with <lb/> as here --> 
+
+<lb/><opener><dateline rend="right"><placeName>Hadley Green</placeName> <date when="1857-08-22">22 August<!-- Change line info as appropriate --><!-- Begin each line with <lb/> as here --> 
 <lb/> 1857</date></dateline><!-- Change line info as appropriate -->
 <lb/>    
-<lb/><salute>My Dear Sir,</salute><!-- Change line info as appropriate -->
-</opener>
+<lb/><salute>My Dear Sir,</salute></opener><!-- Change line info as appropriate -->
+
 
 
 <lb/><p><!-- Begin transcribed text here --></p>
@@ -100,10 +100,9 @@
 
 
 <!-- If there is a letter or similar with a closer with content such as salute or signed -->
-<closer>
-<lb/><salute>I am &amp;</salute><!-- Change as appropriate -->
-<lb/><signed><persName>David Livingstone</persName></signed><!-- Change as appropriate --> 
-</closer>
+<lb/><closer><salute>I am &amp;</salute><!-- Change as appropriate -->
+<lb/><signed><persName>David Livingstone</persName></signed></closer><!-- Change as appropriate --> 
+
 
 
             </div>

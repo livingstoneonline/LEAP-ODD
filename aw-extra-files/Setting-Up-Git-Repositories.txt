@@ -1,0 +1,23 @@
+~$ sudo apt-get install git
+~$ mkdir git
+
+~$ cd git
+
+~/git$ git clone https://github.com/TEIC/Stylesheets.git
+
+~/git$ git clone https://github.com/livingstoneonline/LEAP-ODD.git
+
+~/git$ git clone https://github.com/livingstoneonline/LEAP-XSLT.git
+
+~/git$ sudo apt-get install trang
+~/git$ sudo apt-get install ant
+~/git$ cd LEAP-ODD
+~/git/LEAP-ODD$ git pull
+[do some change to leap.odd.xml]
+~/git/LEAP-ODD$ make
+~/git/LEAP-ODD$ git commit -a
+[give commit message]
+~/git/LEAP-ODD$ git push
+ 
+
+
