@@ -53,8 +53,8 @@ of this software, even if advised of the possibility of such damage.
 <xsl:param name="pagebreakStyle">plain</xsl:param>
 <xsl:param name="pageStyle">empty</xsl:param>
   
-<xsl:template priority="1000" match="tei:milestone"/>
-<xsl:template priority="1000" match="tei:pb">{\newline \newline <xsl:if test="@n">[<xsl:value-of select="@n"/>]</xsl:if>}</xsl:template>
+<xsl:template priority="1000" match="tei:milestone"/> 
+<xsl:template priority="1000" match="tei:pb">{\newline \newline \noindent <xsl:if test="@n">[<xsl:value-of select="@n"/>]</xsl:if>}</xsl:template>
   <xsl:template priority="1000" match="tei:del//tei:pb">}{\newline \newline <xsl:if test="@n">[<xsl:value-of select="@n"/>]</xsl:if>}\sout{</xsl:template>
   
   <xsl:template priority="1000" match="@facs"/>
@@ -88,7 +88,7 @@ of this software, even if advised of the possibility of such damage.
   <xsl:template priority="1000" match="tei:choice[tei:sic]"><xsl:apply-templates select="tei:sic[1]"/></xsl:template>
   <xsl:template priority="1000" match="tei:expan|tei:reg|tei:corr|tei:supplied"/>
   
-  <xsl:template priority="1000" match="tei:salute|tei:term|tei:unclear|tei:foreign|tei:orig|tei:sic|tei:dateline|tei:abbr"><xsl:apply-templates/></xsl:template>
+  <xsl:template priority="1000" match="tei:persName|tei:placeName|tei:name|tei:rs|tei:salute|tei:term|tei:unclear|tei:foreign|tei:orig|tei:sic|tei:dateline|tei:abbr"><xsl:apply-templates/></xsl:template>
   
   <xsl:template priority="1000" match="tei:del">\sout{<xsl:apply-templates />}</xsl:template>
   
@@ -100,20 +100,21 @@ of this software, even if advised of the possibility of such damage.
   <xsl:template priority="1000" match="tei:lb"> \newline </xsl:template>
 
 
-  <xsl:template priority="1000" match="tei:lb[preceding-sibling::node()[1][name()='dateline']|preceding-sibling::node()[1][name()='pb']]"/> 
+  <xsl:template priority="1001" match="tei:lb[preceding-sibling::node()[1][name()='dateline']|preceding-sibling::node()[1][name()='fw']]"/> 
 
 
   <xsl:template priority="1000" match="tei:fw[.//text()]"><xsl:apply-templates/> \newline</xsl:template>
   <xsl:template priority="1000" match="tei:fw[not(.//text())]"/>
   
-  <xsl:template name="tei:item"><xsl:text>\item</xsl:text><xsl:if test="@n">[<xsl:value-of select="@n"/>]</xsl:if><xsl:text> </xsl:text><xsl:apply-templates/></xsl:template>
+  <xsl:template match="tei:item" priority="1000"><xsl:text>\item <!--/xsl:text><xsl:if test="@n">[<xsl:value-of select="@n"/>]</xsl:if><xsl:text>--> </xsl:text><xsl:apply-templates/></xsl:template>
+  <xsl:template match="tei:list" priority="1000"> \begin{itemize} <xsl:apply-templates/> \end{itemize}</xsl:template>
   
   <!--
   <xsl:template name="latexPackages">\usepackage{parskip}</xsl:template>   
   -->
   
   
-  <xsl:template name="beginDocumentHook">{\newline Published by Livingstone Online (livingstoneonline.org)}
+  <xsl:template name="beginDocumentHook">{\newline Published by Livingstone Online (livingstoneonline.org) \newline \newline}
     \let\cleardoublepage\clearpage
     <!--\setlength{\parskip}{pt}--> 
   </xsl:template>   
