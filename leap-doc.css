@@ -54,7 +54,7 @@ body{
    background-color: #FFFFFF;
    margin: 10pt;
    padding:10px;
-   font-family: Verdana, Tahoma, Geneva, Arial, Helvetica, sans-serif;
+   font-family: Calibri, Verdana, Tahoma, Geneva, Arial, Helvetica, sans-serif;
 }
 
 body.pagetable {
@@ -146,7 +146,7 @@ div.stdheader {
 #hdr2{
    width: auto;
    color: #000000;
-   font-family: Arial,Helvetica,sans-serif;
+   font-family: Calibri,Arial,Helvetica,sans-serif;
    font-weight: bold;
    background-color : #99CCFF;
    padding-left : 5px;
@@ -164,7 +164,7 @@ div.stdheader {
    padding-bottom : 2px;
    padding-top : 2px;
    padding-right : 5px;
-   font-family: Arial,Helvetica,sans-serif;
+   font-family: Calibri,Arial,Helvetica,sans-serif;
    font-weight : bold;
    font-size: smaller;
 }
@@ -172,7 +172,7 @@ div.stdheader {
 .bannerright {
    float: right ;
    color: #FFFFFF;
-   font-family : Arial, Helvetica, sans-serif;
+   font-family : Calibri,Arial, Helvetica, sans-serif;
    font-size : 0.8em;
    font-weight : bold;
    text-decoration: none;
@@ -202,38 +202,36 @@ h3 {
 
 
 h1.maintitle {
-   margin-left: 100px;
-   font-family: Arial,Helvetica,sans-serif;
+   font-family: Calibri,Arial,Helvetica,sans-serif;
    font-weight: bold;
    bottom: 5px;
 }
 
 h1.title {
    margin-left: 100px;
-   font-family: Arial,Helvetica,sans-serif;
+   font-family: Calibri,Arial,Helvetica,sans-serif;
    font-weight: bold;
    bottom: 5px;
 }
 
 h2.institution {
-   margin-left: 100px;
-   font-family: Arial,Helvetica,sans-serif;
+   font-family: Calibri,Arial,Helvetica,sans-serif;
 }
 
 h2.department {
    margin-left: 100px;
-   font-family: Arial,Helvetica,sans-serif;
+   font-family: Calibri,Arial,Helvetica,sans-serif;
 }
 
 h2.subtitle {
    margin-left: 100px;
-   font-family: Arial,Helvetica,sans-serif;
+   font-family: Calibri,Arial,Helvetica,sans-serif;
    font-weight: bold;
 }
 
 .footer {
    text-align : center;
-   font-family: Arial,Helvetica,sans-serif; 
+   font-family: Calibri,Arial,Helvetica,sans-serif; 
    font-size : 0.8em;
 }
 
@@ -244,7 +242,7 @@ a.breadcrumb{
    color: #FFFFFF;
    text-decoration: none;
    padding-right : 5px;
-   font-family: Arial,Helvetica,sans-serif;
+   font-family: Calibri,Arial,Helvetica,sans-serif;
    font-weight : bold;
    font-size : 0.8em;
 }
@@ -281,7 +279,7 @@ div.breadcrumb {
 }
 
 .skiplinks{
-   font-family: arial, sans-serif;
+   font-family: Calibri,Arial,sans-serif;
    color: #FFFFFF;
    font-weight : bold;
    font-size : 0.8em;
@@ -338,25 +336,29 @@ pre,div.pre,div.pre_eg,pre.eg,div.eg {
     clear:both;
     margin-top: 1em;
     margin-bottom:1em;
-    border-top-width: 4px;
-    border-bottom-width: 4px;
-    border-left-width: 2px;
-    border-right-width: 2px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
     border-style: solid;
     padding-top: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
     color: #000000;
-    line-height: 1.1em;
+    line-height: 1.5em;
     font-family: monospace;
     font-size: 10pt;
     white-space: pre;
+	overflow:scroll;
 }
 
 div.egXML_valid {
-    background-color: #f7f9f6;
+    background-color: #ededed;
     border-color: #c5d8bb;
+	overflow: scroll;
+	display: block;
+	
     }
 div.egXML_feasible {
     background-color: #fff9f3;
@@ -376,7 +378,7 @@ li.toc {list-style: none;}
 
 a.inlinetoc:link,a.inlinetoc:visited
 {
-   color: #7A7A7A;
+   color: #428bca;
    font-size: smaller; 
    text-decoration: none;
 }
@@ -399,7 +401,7 @@ a.inlinetoc-sub:visited,a.inlinetoc-sub:link
 
 span.toclist{
    font-size: smaller; 
-   font-family: Arial,Helvetica,sans-serif;
+   font-family: Calibri,Arial,Helvetica,sans-serif;
    font-weight: bold;
 }
 
@@ -1134,7 +1136,7 @@ span.specName {
     font-size: 0.95em;
 }
 .index {
-    font: bold 100% Verdana, Helvetica, sans-serif;
+    font: bold 100% Calibri, Verdana, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -1412,11 +1414,11 @@ span.lemmawitness {
 /*LEAP Specific Overrides*/
 
 /* oXygen Colours*/
-body {margin:2em!important;} 
-a.link_ref, span.element, span.tag, span.gi {color:#000096;}
-span.att, span.attribute {color:#F5844C;}
-span.val, span.attributevalue {color:#993300;}
-span.comment {color:#009600;}
+body {margin-left:2em!important; margin-right:2em!important;} 
+a.link_ref, span.element, span.tag, span.gi {color:#354dae;}
+span.att, span.attribute {color:#eba57f;}
+span.val, span.attributevalue {color:#a25f3c;}
+span.comment {color:#548f34;}
 dl.valList {margin-left:5em;}
-a.navTOC {text-decoration:none; color:#EEE; margin-right:5px; font-size:12pt;} 
+a.navTOC {text-decoration:none; color:#428bca; margin-right:5px; font-size:12pt;} 
 a.navTOCRight {text-decoration:none; color:#EEE; margin-right:5px; font-size:12pt; float:right; clear:right;} 
