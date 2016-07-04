@@ -62,6 +62,7 @@ body.pagetable {
    background-color: #FFFFFF;
 }
 
+
 /* 3 columns allowed for, or just a right and left */  
 #col1{
    width: 20%;
@@ -296,6 +297,11 @@ div.breadcrumb {
    display : none;
 }
 
+
+a:link, a:visited{
+	color: #354dae;
+}
+
 a:hover
 {
    text-decoration: underline;
@@ -443,7 +449,6 @@ a.toclist:visited,a.toclist:link
    color: #000000;
    text-decoration: none;
 }
-
 
 
 /* notes */
