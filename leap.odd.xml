@@ -2639,6 +2639,9 @@ This hand belongs to Charles Livingstone.</handNote>
                                     <valItem ident="center">
                                         <desc>aligned in the center</desc>
                                     </valItem>
+                                    <valItem ident="diagonal">
+                                        <desc>rendered diagonally</desc>
+                                    </valItem>
                                     <!--<valItem ident="dropcap">
                                         <desc>rendered as drop-cap or illuminated initial</desc>
                                     </valItem>
@@ -2690,6 +2693,9 @@ This hand belongs to Charles Livingstone.</handNote>
                                     <valItem ident="other">
                                         <desc>other rendering</desc>
                                     </valItem>
+                                    <valItem ident="overline">
+                                        <desc>overlined</desc>
+                                    </valItem>
                                     <valItem ident="quarter-line">
                                         <desc>rendering is of a quarter line</desc>
                                     </valItem>
@@ -2719,9 +2725,6 @@ This hand belongs to Charles Livingstone.</handNote>
                                     </valItem>
                                     <valItem ident="underline">
                                         <desc>underlined</desc>
-                                    </valItem>
-                                    <valItem ident="diagonal">
-                                        <desc>rendered diagonally</desc>
                                     </valItem>
                                     <valItem ident="upside-down">
                                         <desc>rendered upside-down</desc>
