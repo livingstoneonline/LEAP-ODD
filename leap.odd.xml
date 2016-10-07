@@ -1701,7 +1701,7 @@ and <measure>1000 yards across</measure></measure></egXML>
 				This format should be used regardless of the state in which the given item appears in the text.
 					<egXML xmlns="http://www.tei-c.org/ns/Examples"><term type="plant_foodstuff">coffee</term></egXML>
                     If Livingstone refers to an animal that, in context, is also a foodstuff, code as follows using two <gi>term</gi> elements:
-<egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><term type="animal"><term tag="foodstuff">goat</term></term></egXML>
+<egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><term type="animal"><term type="foodstuff">goat</term></term></egXML>
 				Beverages, both alcoholic and non-alcoholic, <hi rend="underline">should be coded</hi> as foodstuff and follow previously stated formats.
 					<egXML xmlns="http://www.tei-c.org/ns/Examples"><term type="foodstuff">brandy</term></egXML></p>
 				<p><hi rend="bold underline">Note:</hi> Terms relating to meals (such as breakfast, lunch, supper) <hi rend="underline">should not be coded</hi> as "foodstuff."</p>

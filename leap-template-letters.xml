@@ -6,23 +6,14 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Letter to Thomas Maclear, 15 February, 2 March 1856</title><!-- Change -->
+                <title>Letter to Thomas Maclear,</title><!-- Change -->
+                <title type="alternative">Letter to Thomas Maclear, 15 February, 2 March 1856</title><!-- Change -->
                 <author>David Livingstone</author>
                 <principal>Adrian S. Wisnicki</principal>
                 <principal>Christopher Lawrence</principal>
-                <respStmt xml:id="JM"><!-- Add or remove individuals from the list as appropriate -->
-                    <name>Jared McDonald</name><!-- Change -->
+                <respStmt xml:id="BL"><!-- Add or remove individuals from the list as appropriate -->
+                    <name>Blaze Livingston</name><!-- Change -->
                     <resp>Transcription</resp><!-- Change, remove, or add more <resp> as appropriate -->
-                    <resp>Encoding</resp>
-                </respStmt>
-                <respStmt xml:id="AA">
-                    <name>Angela Aliff</name>
-                    <resp>Transcription</resp>
-                    <resp>Encoding</resp>
-                </respStmt>
-                <respStmt xml:id="AM">
-                    <name>Anne Martin</name>
-                    <resp>Transcription</resp>
                     <resp>Encoding</resp>
                 </respStmt>
                 <respStmt xml:id="AW">
@@ -40,10 +31,10 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country>South Africa</country><!-- Change as needed -->
-                        <settlement>Cape Town</settlement><!-- Change as needed -->
+                        <country>South Africa</country><!-- Change as needed. Country of repository. -->
+                        <settlement>Cape Town</settlement><!-- Change as needed. City of repository. -->
                         <repository>National Library of South Africa</repository><!-- Change as needed -->
-                        <idno type="shelfmark"></idno><!-- Change as needed -->
+                        <idno type="shelfmark">MS. 1003</idno><!-- Change as needed -->
                         <altIdentifier>
                             <idno type="ccnumber">Letters, 0394</idno><!-- This the CC number; change, as appropriate -->
                         </altIdentifier>
@@ -56,11 +47,11 @@
                     </physDesc>
                 </msDesc>
                 <bibl type="sourceMetadata">
-                    <title>Letter to Thomas Maclear, 15 February, 2 March 1856</title><!-- Change -->
+                    <title type="alternative">Letter to Thomas Maclear, 15 February, 2 March 1856</title><!-- Change -->
                     <author xml:id="DL">David Livingstone</author>
                     <date type="composition" when="1856-03-02">2 March 1856</date><!-- Change -->
-                    <placeName type="compositionPlace">Near Tete or Nyunkwe-Tete</placeName><!-- Change -->
-                    <persName type="addressee">Thomas Maclear</persName><!-- Change -->
+                    <placeName type="compositionPlace">Near Tete or Nyunkwe-Tete</placeName><!-- Change. Where DL composed. -->
+                    <persName type="addressee">Thomas Maclear</persName><!-- Change. Person to whom DL wrote. -->
                 </bibl>
             </sourceDesc>
         </fileDesc>
@@ -87,11 +78,12 @@
 
 <!-- If this is a letter or similar with an opener (with content such as dateline and/or salute) add it. For example: -->
 
-<lb/><opener><dateline rend="right"><placeName>Hadley Green</placeName> <date when="1857-08-22">22 August<!-- Change line info as appropriate --><!-- Begin each line with <lb/> as here --> 
+<!-- Change opener info below as appropriate --> 
+<lb/><opener><dateline rend="right"><placeName>Hadley Green</placeName><!-- Begin each line with <lb/> as here --> 
+<lb/><date when="1857-08-22">22 August
 <lb/>1857</date></dateline><!-- Change line info as appropriate -->
 <lb/>    
 <lb/><salute>My Dear Sir,</salute></opener><!-- Change line info as appropriate -->
-
 
 
 <lb/><p><!-- Begin transcribed text here --></p>
@@ -100,7 +92,7 @@
 
 
 <!-- If there is a letter or similar with a closer with content such as salute or signed -->
-<lb/><closer><salute>I am &amp;</salute><!-- Change as appropriate -->
+<lb/><closer rend="right"><salute>I am &amp;</salute><!-- Change as appropriate -->
 <lb/><signed><persName>David Livingstone</persName></signed></closer><!-- Change as appropriate --> 
 
 
