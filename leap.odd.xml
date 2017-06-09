@@ -2686,10 +2686,9 @@ This hand belongs to Charles Livingstone.</handNote>
                                     <valItem ident="no-indent">
                                         <desc>rendered as not indented</desc>
                                     </valItem>
-                                    <!--<valItem ident="normal">
+                                    <valItem ident="normal">
                                         <desc>rendering returns to 'normal'</desc>
                                     </valItem>
-                                    -->
                                     <valItem ident="other">
                                         <desc>other rendering</desc>
                                     </valItem>
