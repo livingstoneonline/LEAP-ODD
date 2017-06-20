@@ -1,6 +1,0 @@
-You need to make a symlink from
-/Users/awisnicki2/GitHub/Stylesheets/profiles/LEAP to wherever
-you have the 'profiles' directory of the LEAP-ODD repository.
-
-Or use --profiledir=/path/to/directory/above/LEAP/profile  but
-that is actually more complicated than just using a symlink.
