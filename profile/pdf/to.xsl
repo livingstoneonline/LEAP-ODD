@@ -57,27 +57,31 @@ of this software, even if advised of the possibility of such damage.
   
 <xsl:template priority="1000" match="tei:milestone">
   <xsl:choose>
-    <xsl:when test="@rend='line'">\newline\noindent\line(1,0){200}</xsl:when>
+    <xsl:when test="@rend='line'">\newline \noindent\line(1,0){200}</xsl:when>
     <xsl:when test="@rend='double-line'">
-\newline\noindent\line(1,0){200}
-\newline\noindent\line(1,0){200}
+\newline \noindent\line(1,0){200}
+\newline \noindent\line(1,0){200}
 </xsl:when>
     <xsl:when test="@rend='triple-line'">
-\newline\noindent\line(1,0){200}
-\newline\noindent\line(1,0){200}
-\newline\noindent\line(1,0){200}
+\newline \noindent\line(1,0){200}
+\newline \noindent\line(1,0){200}
+\newline \noindent\line(1,0){200}
 </xsl:when>
-    <xsl:when test="@rend='half-line'">\newline\noindent\line(1,0){100}</xsl:when>
-    <xsl:when test="@rend='quarter-line'">\newline\noindent\line(1,0){50}</xsl:when>
+    <xsl:when test="@rend='half-line'">\newline \noindent\line(1,0){100}</xsl:when>
+    <xsl:when test="@rend='quarter-line'">\newline \noindent\line(1,0){50}</xsl:when>
   </xsl:choose>
-\\  
+\\[\baselineskip]  
 </xsl:template>
-  <xsl:template match="tei:note" priority="1000"><xsl:text>\newline\noindent [</xsl:text><xsl:apply-templates/><xsl:text>]\newline\noindent </xsl:text></xsl:template>  
+  <xsl:template match="tei:note" priority="1000"><xsl:text>\newline \noindent [</xsl:text><xsl:apply-templates/><xsl:text>]\noindent </xsl:text></xsl:template>  
 
-<xsl:template priority="1000" match="tei:pb">{\newline \newline \noindent <xsl:if test="@n">[<xsl:value-of select="@n"/>]</xsl:if>}<xsl:if test="not(following-sibling::*[2][name()='p']/@rend='no-indent')">\\</xsl:if></xsl:template>
+  <xsl:template match="tei:note[@place='marginleft']" priority="100000"><xsl:text>\newline \ [</xsl:text><xsl:apply-templates/><xsl:text>]\noindent </xsl:text></xsl:template>  
+
+<xsl:template match="tei:note[@place='marginleft']//tei:lb | tei:add[@place='marginleft']//tei:lb" priority="200000"/>
+
+<xsl:template priority="1000" match="tei:pb">{\newline  \newline  \newline  \noindent <xsl:if test="@n">[<xsl:value-of select="@n"/>]</xsl:if>}<xsl:if test="not(following-sibling::*[2][name()='p']/@rend='no-indent')"><xsl:text>\newline </xsl:text></xsl:if></xsl:template>
   
 
-  <xsl:template priority="1000" match="tei:del//tei:pb">}{\newline \newline <xsl:if test="@n">[<xsl:value-of select="@n"/>]</xsl:if>}\sout{</xsl:template>
+  <xsl:template priority="1000" match="tei:del//tei:pb">}{\newline  \newline  <xsl:if test="@n">[<xsl:value-of select="@n"/>]</xsl:if>}\sout{</xsl:template>
   
   <xsl:template priority="1000" match="@facs"/>
 
@@ -94,22 +98,22 @@ of this software, even if advised of the possibility of such damage.
 
 <xsl:template priority="1000" match="tei:facsimile |tei:surface/tei:graphic"/>
 
-<xsl:template priority="1000" match="tei:addrLine"> {\newline <xsl:apply-templates/>}</xsl:template>
+<xsl:template priority="1000" match="tei:addrLine"> {\newline  <xsl:apply-templates/>}</xsl:template>
 
-  <xsl:template priority="1000" match="tei:p"> <xsl:if test="not(preceding-sibling::node()[1][name()='lb'])">\newline</xsl:if> \indent <xsl:apply-templates/> </xsl:template>
+  <xsl:template priority="1000" match="tei:p"> <xsl:if test="not(preceding-sibling::node()[1][name()='lb'])">\newline </xsl:if> \indent <xsl:apply-templates/> </xsl:template>
    
-<xsl:template priority="1000" match="tei:p[@rend='no-indent'] | tei:ab"> \newline\noindent <xsl:apply-templates/> </xsl:template>
+<xsl:template priority="1001" match="tei:p[@rend='no-indent'] | tei:ab" > \newline \noindent <xsl:apply-templates/> </xsl:template>
    
 <xsl:template priority="1000" match="tei:app"><xsl:apply-templates select="tei:rdg[1]"/></xsl:template>
   
-<xsl:template priority="1000" match="tei:figure/tei:figDesc[text()]"> [<xsl:apply-templates/>]</xsl:template>
-<xsl:template priority="1000" match="tei:figure"><xsl:text>\ </xsl:text><xsl:apply-templates /></xsl:template>
-<xsl:template priority="1000" match="tei:figure/tei:head"><xsl:apply-templates />\newline\noindent</xsl:template>
+<xsl:template priority="1000" match="tei:figure/tei:figDesc[text()]"><xsl:text>\ </xsl:text> [<xsl:apply-templates/>] <xsl:text>\ </xsl:text></xsl:template>
+<xsl:template priority="1000" match="tei:figure"><xsl:text>\newline \  </xsl:text><xsl:apply-templates /></xsl:template>
+<xsl:template priority="1000" match="tei:figure/tei:head"><xsl:apply-templates />\noindent</xsl:template>
     
   <xsl:template priority="1000" match="tei:choice[tei:orig]"><xsl:apply-templates select="tei:orig[1]"/></xsl:template>
   <xsl:template priority="1000" match="tei:choice[tei:abbr]"><xsl:apply-templates select="tei:abbr[1]"/></xsl:template>
   <xsl:template priority="1000" match="tei:choice[tei:sic]"><xsl:apply-templates select="tei:sic[1]"/></xsl:template>
-  <xsl:template priority="1000" match="tei:expan|tei:reg|tei:corr|tei:supplied"/>
+  <xsl:template priority="1000" match="tei:expan|tei:reg|tei:corr"/>
   
   <xsl:template priority="1000" match="tei:persName|tei:placeName|tei:name|tei:rs|tei:salute|tei:term|tei:unclear|tei:foreign|tei:orig|tei:sic|tei:dateline|tei:abbr"><xsl:apply-templates/></xsl:template>
   
@@ -123,13 +127,13 @@ of this software, even if advised of the possibility of such damage.
 <xsl:template match="tei:table/tei:lb" priority="10000"/>
   
  
-  <xsl:template priority="1000" match="tei:lb"> \newline </xsl:template>
-  <xsl:template priority="1000" match="tei:lb[following-sibling::tei:p[1]/@rend='no-indent']"/> 
+  <xsl:template priority="1000" match="tei:lb"> \newline  </xsl:template>
+  <xsl:template priority="1001" match="tei:lb[following-sibling::tei:p[1]/@rend='no-indent']" /> 
 
-  <xsl:template priority="1001" match="tei:lb[preceding-sibling::node()[1][name()='dateline']|preceding-sibling::node()[1][name()='fw']]"/> 
+  <xsl:template priority="1005" match="tei:lb[preceding-sibling::node()[1][name()='dateline']|preceding-sibling::node()[1][name()='fw']]"/> 
 
 
-  <xsl:template priority="1000" match="tei:fw[.//text()]"><xsl:apply-templates/> \newline</xsl:template>
+  <xsl:template priority="1000" match="tei:fw[.//text()]"><xsl:apply-templates/> \newline </xsl:template>
   <xsl:template priority="1000" match="tei:fw[not(.//text())]"/>
   
  
@@ -139,7 +143,7 @@ of this software, even if advised of the possibility of such damage.
  <xsl:template match="tei:list" priority="1000"> \begin{itemize} <xsl:apply-templates/> \end{itemize}</xsl:template>
 --> 
   <xsl:template match="tei:item" priority="1000">\ <!--/xsl:text><xsl:if test="@n">[<xsl:value-of select="@n"/>]</xsl:if><xsl:text>--> <xsl:apply-templates/></xsl:template>
-  <xsl:template match="tei:list" priority="1000"> <xsl:apply-templates/> <xsl:if test="following::*[2]/name()='pb'">\\ </xsl:if></xsl:template>
+  <xsl:template match="tei:list" priority="1000"> <xsl:apply-templates/> <xsl:if test="following::*[2]/name()='pb'">\\[\baselineskip] </xsl:if></xsl:template>
   <!--https://github.com/livingstoneonline/PDF-Files/issues/11 -->
   <xsl:template match="tei:list/tei:head" priority="1000"><xsl:apply-templates/></xsl:template>
     
@@ -149,7 +153,7 @@ of this software, even if advised of the possibility of such damage.
   -->
   
   
-  <xsl:template name="beginDocumentHook">{\newline Published by Livingstone Online (livingstoneonline.org) \newline \newline}
+  <xsl:template name="beginDocumentHook">{\newline  Published by Livingstone Online (livingstoneonline.org) \newline  \newline }
     \let\cleardoublepage\clearpage
     <!--\setlength{\parskip}{pt}--> 
 <!-- set left align for tables -->
@@ -260,7 +264,7 @@ of this software, even if advised of the possibility of such damage.
   
 
   <xsl:template match="tei:body" priority="1000">
-    <xsl:text> \\ \\  </xsl:text>
+    <xsl:text> \\[\baselineskip] \\[\baselineskip]  </xsl:text>
     <xsl:if test="not(ancestor::tei:floatingText) and not(preceding::tei:body) and preceding::tei:front">
       <!--<xsl:text>\mainmatter </xsl:text>-->
     </xsl:if>
@@ -300,13 +304,13 @@ of this software, even if advised of the possibility of such damage.
 <!-- fix  for https://github.com/livingstoneonline/PDF-Files/issues/10 just makeInline -->
 
 
-<xsl:template match="tei:add" priority="1000"><xsl:text>\   </xsl:text><xsl:call-template name="makeInline"><xsl:with-param name="style">add</xsl:with-param></xsl:call-template></xsl:template>
+<xsl:template match="tei:add" priority="1000"><xsl:if test="not(ancestor::tei:subst)"><xsl:text>\ </xsl:text></xsl:if><xsl:call-template name="makeInline"><xsl:with-param name="style">add</xsl:with-param></xsl:call-template></xsl:template>
 
 
   <!-- fix for https://github.com/livingstoneonline/PDF-Files/issues/2 -->
    
   <xsl:template match="tei:back" priority="1000">
-       <xsl:text>\\ </xsl:text>
+       <xsl:text>\\[\baselineskip] </xsl:text>
     <xsl:text>\hfill \break</xsl:text>
 <xsl:apply-templates/>
   </xsl:template>
