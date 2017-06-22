@@ -71,12 +71,9 @@ of this software, even if advised of the possibility of such damage.
     <xsl:when test="@rend='quarter-line'">\newline \noindent\line(1,0){50}</xsl:when>
   </xsl:choose>
 \\[\baselineskip]  
-</xsl:template>
-  <xsl:template match="tei:note" priority="1000"><xsl:text>\newline \noindent [</xsl:text><xsl:apply-templates/><xsl:text>]\noindent </xsl:text></xsl:template>  
+</xsl:template> 
 
-  <xsl:template match="tei:note[@place='marginleft']" priority="100000"><xsl:text>\newline \ [</xsl:text><xsl:apply-templates/><xsl:text>]\noindent </xsl:text></xsl:template>  
-
-<xsl:template match="tei:note[@place='marginleft']//tei:lb | tei:add[@place='marginleft']//tei:lb" priority="200000"/>
+<!-- <note> templates would go here -->
 
 <xsl:template priority="1000" match="tei:pb">{\newline  \newline  \newline  \noindent <xsl:if test="@n">[<xsl:value-of select="@n"/>]</xsl:if>}<xsl:if test="not(following-sibling::*[2][name()='p']/@rend='no-indent')"><xsl:text>\newline </xsl:text></xsl:if></xsl:template>
   
@@ -86,7 +83,6 @@ of this software, even if advised of the possibility of such damage.
   <xsl:template priority="1000" match="@facs"/>
 
 <xsl:template priority="1000" match="tei:geogName"><xsl:apply-templates/></xsl:template>
-
 
 <xsl:template priority="1000" match="tei:supplied">[<xsl:apply-templates/>]</xsl:template>
   
