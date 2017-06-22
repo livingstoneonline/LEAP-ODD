@@ -151,7 +151,7 @@ of this software, even if advised of the possibility of such damage.
   -->
   
   
-  <xsl:template name="beginDocumentHook">{\newline  Published by Livingstone Online (livingstoneonline.org) \newline  \newline }
+  <xsl:template name="beginDocumentHook">{\newline  Published by Livingstone Online (livingstoneonline.org), 2017 \newline  \newline }
     \let\cleardoublepage\clearpage
     <!--\setlength{\parskip}{pt}--> 
 <!-- set left align for tables -->
