@@ -82,6 +82,8 @@ of this software, even if advised of the possibility of such damage.
   
   <xsl:template priority="1000" match="@facs"/>
 
+<xsl:template priority="1000" match="tei:gap">[...]</xsl:template>
+
 <xsl:template priority="1000" match="tei:geogName"><xsl:apply-templates/></xsl:template>
 
 <xsl:template priority="1000" match="tei:supplied">[<xsl:apply-templates/>]</xsl:template>
