@@ -75,6 +75,22 @@ of this software, even if advised of the possibility of such damage.
 
 <!-- <note> templates would go here -->
 
+<xsl:template match="tei:note" priority="1000"><xsl:text>\newline \noindent [</xsl:text><xsl:apply-templates/><xsl:text>] </xsl:text></xsl:template> 
+
+<xsl:template match="tei:note[@place='marginleft']" priority="100000"><xsl:text>\newline \ [</xsl:text><xsl:apply-templates/><xsl:text>] \ \noindent </xsl:text></xsl:template> 
+ 
+<xsl:template match="tei:note[@place='marginleft']//tei:lb | tei:add[@place='marginleft']//tei:lb" priority="200000"/>
+
+<!--<xsl:template match="tei:note"
+priority="1000"><xsl:text>[</xsl:text><xsl:value-of select="."/><xsl:text>]</xsl:text></xsl:template>-->
+
+
+<!--<xsl:template match="tei:note[@place='marginleft']"
+priority="100000"><xsl:text>[</xsl:text><xsl:value-of select="."/><xsl:text>]</xsl:text></xsl:template>
+
+<xsl:template match="tei:note[@place='marginleft']//tei:lb |
+tei:add[@place='marginleft']//tei:lb" priority="200000"/>-->
+
 <xsl:template priority="1000" match="tei:pb">{\newline  \newline  \newline  \noindent <xsl:if test="@n">[<xsl:value-of select="@n"/>]</xsl:if>}<xsl:if test="not(following-sibling::*[2][name()='p']/@rend='no-indent')"><xsl:text>\newline </xsl:text></xsl:if></xsl:template>
   
 
