@@ -134,6 +134,7 @@ body.pagetable {
 /* the main title */
 div.stdheader {
       border-bottom: 1pt solid black;
+	display: none;
 }
 
 #hdr{
