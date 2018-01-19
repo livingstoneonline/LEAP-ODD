@@ -903,6 +903,7 @@ table.wovenodd tr td table.attList tr {
 table.wovenodd tr td table.attList tr td {
     border-spacing:0px;
     border:none;
+    padding-left:2.3em;
 }
 table.attList {
     table-layout: fixed;
