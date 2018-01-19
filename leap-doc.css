@@ -1421,7 +1421,7 @@ span.lemmawitness {
 /*LEAP Specific Overrides*/
 
 /* oXygen Colours*/
-body {margin-left:12%!important; margin-right:12%!important;} 
+body {margin-left:8%!important; margin-right:8%!important;} 
 a.link_ref, span.element, span.tag, span.gi {color:#354dae;}
 span.att, span.attribute {color:#eba57f;}
 span.val, span.attributevalue {color:#a25f3c;}
