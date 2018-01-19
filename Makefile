@@ -10,4 +10,4 @@ generateHTML:
 generateFiles:	generateSchema generateHTML
 
 zip:
-	rm leap.zip; zip leap.zip leap.odd.xml leap-doc.css leap.html leap.rng leap-template-letters.xml leap-template-diaries.xml
+	rm leap.zip; zip leap.zip leap.odd.xml leap-doc.css leap.html leap.rng leap-template-letters.xml leap-template-diaries.xml one-more-voice-template.xml
