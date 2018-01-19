@@ -1774,7 +1774,7 @@ and <measure>1000 yards across</measure></measure></egXML>
                 <head>Organizations and Other Groups</head>
                 
                 <p>Use the <gi>orgName</gi> element to mark instances in the text where there is mention of an organization or other type of group (or any reference to an individual as being part of a group) that is not covered by <ptr target="#nationalities"/>, <ptr target="#people"/>, or <ptr target="#ethnic-groups"/>. Note that all the following entities should be marked with the <gi>orgName</gi> element: Aborigine, Aborigines, African, Africans, Arab, Arabs, Banian, Banians, Boer, Boers, Bushman, Bushmen, Caffre (or the variant spellings, Kaffre and Kaffir), Caffres (or the variant spellings, Kaffres and Kaffirs), Christian (an individual; for use of Christian as an adjective, see <ptr target="#faiths"/>), Christians, European, Europeans, Griqua, Moslem (an individual; for use of Moslem as an adjective, see <ptr target="#faiths"/>), and Moslems. For references to organized religions (e.g., Christianity, Islam), see <ptr target="#faiths"/>.</p> 
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">the <orgName>the London Missionary Society</orgName></egXML>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">the <orgName>bLondon Missionary Society</orgName></egXML>
 					<egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><orgName>African</orgName> villages</egXML>
 					<egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">I spoke with the <orgName>Arab</orgName></egXML>
                 <p>"Johanna men" and "Nassick boys" (and all variants of these two groups) to be coded as follows:</p>
@@ -1789,8 +1789,7 @@ and <measure>1000 yards across</measure></measure></egXML>
                 <p>Groups relating to a specific person should also be marked with <gi>orgName</gi>:</p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><lb/><orgName><persName>Emboro</persName>'s men</orgName>
 					</egXML>
-                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><lb/>from depositions of survivors of <orgName><persName>Baron</persName>'s party</orgName>
-                </egXML>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><lb/>from depositions of survivors of <orgName><persName>Baron</persName>'s party</orgName></egXML>
 				<p>Definitions of the elements used above are: <specList>
                         <specDesc key="orgName"/>
                         <specDesc key="term" atts="type"/>
@@ -1876,13 +1875,13 @@ and <measure>1000 yards across</measure></measure></egXML>
                 
                 <p>Use the <gi>list</gi> element to contain any lists that appear in the text. 
                     The title of any such list should be marked with the <gi>head</gi> element, while <gi>item</gi> should be used for each item within the list:
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><lb/><list><head>Villages:</head> <item>Bambarre,</item> <item>Nyangwe,</item> <item>Ujiji</item></list></egXML>
-				Lists may also be broken up with line breaks (<tag>lb/</tag>)as needed:
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><lb/><list><head>Villages:</head> <item>Bambarre,</item> <item>Nyangwe,</item> <item>Ujiji</item></list></egXML></p>
+				<p>Lists may also be broken up with line breaks (<tag>lb/</tag>)as needed:
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><lb/><list><head>Villages</head> 
 <lb/><item>Bambarre</item>
 <lb/><item>Nyangwe</item>
-<lb/><item>Ujiji</item></list></egXML>
-				Livingstone's texts sometimes also contain tables or have information laid out in a such a way that the table format seems appropriate. Code tables and similar text (as seems appropriate -- such use may be subjective) with the <gi>table</gi> tag plus the <gi>head</gi> (for any title that the table may have), <gi>row</gi>, and <gi>cell</gi> tags.
+<lb/><item>Ujiji</item></list></egXML></p>
+				<p>Livingstone's texts sometimes also contain tables or have information laid out in a such a way that the table format seems appropriate. Code tables and similar text (as seems appropriate -- such use may be subjective) with the <gi>table</gi> tag plus the <gi>head</gi> (for any title that the table may have), <gi>row</gi>, and <gi>cell</gi> tags.
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><lb/><table><head>Villages</head> 
 <lb/><row><cell>Bambarre</cell> <cell>West of Lake Tanganyika</cell></row>
 <lb/><row><cell>Nyangwe</cell> <cell>West of Lake Tanganyika</cell></row>
