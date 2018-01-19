@@ -885,6 +885,8 @@ table.wovenodd {
 }
 table.wovenodd tr td {
     border-spacing:0px;
+    max-width: 410px;
+	min-width: 186px;
 }
 table.wovenodd tr {
     border-spacing:0px;
