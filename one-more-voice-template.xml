@@ -2,27 +2,37 @@
 <?xml-model href="http://livingstoneonline.github.io/LEAP-ODD/leap.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://livingstoneonline.github.io/LEAP-ODD/leap.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-stylesheet href="http://livingstoneonline.github.io/LEAP-XSLT/transcription.xsl" type="text/xsl"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="liv_000015"><!-- Change @xml:id -->
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="liv_000074"><!-- Change @xml:id -->
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Field Diary XV, 7 July 1872-1 December 1872</title><!-- Change -->
+                <title>Field Diary</title><!-- Change -->
+                <title type="alternate">Field Diary, 7 July 1872-1 December 1872</title><!-- Change; note addition of date -->
                 <author>David Livingstone</author>
                 <principal>Adrian S. Wisnicki</principal>
-                <respStmt xml:id="AW"><!-- Add or remove individuals from the list as appropriate -->
-                    <name>Adrian S. Wisnicki</name><!-- Change -->
-                    <resp>Transcription</resp><!-- Change, remove, or add more <resp> as appropriate -->
-                    <resp>TEI Encoding</resp>
-                    <resp>Editorial Decisions</resp>
-					<resp>Proofing</resp>
-					<resp>Encoding Review</resp>
-                </respStmt>
-                <respStmt xml:id="MW">
-                    <name>Megan Ward</name>
+                <respStmt xml:id="AM">
+                    <name>Anne Martin</name>
                     <resp>Transcription</resp>
                     <resp>TEI Encoding</resp>
                     <resp>Editorial Decisions</resp>
 					<resp>Proofing</resp>
+					<resp>Coding Review</resp>
+                </respStmt>
+				<respStmt xml:id="HB">
+                    <name>Heather F. Ball</name>
+                    <resp>Transcription</resp>
+                    <resp>TEI Encoding</resp>
+                    <resp>Editorial Decisions</resp>
+					<resp>Proofing</resp>
+					<resp>Coding Review</resp>
+                </respStmt>
+                <respStmt xml:id="AW">
+                    <name>Adrian S. Wisnicki</name>
+                    <resp>Transcription</resp>
+                    <resp>TEI Encoding</resp>
+                    <resp>Editorial Decisions</resp>
+					<resp>Proofing</resp>
+					<resp>Coding Review</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -30,7 +40,7 @@
                 <publisher>University of Maryland Libraries</publisher>
                 <pubPlace>College Park, MD, USA</pubPlace>
                 <date>2018</date><!-- Change if necessary -->
-                <idno type="LEAP-ID">liv_000015</idno><!-- Change -->
+                <idno type="LEAP-ID">liv_000074</idno><!-- Change -->
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
@@ -39,14 +49,11 @@
                         <settlement>Blantyre</settlement><!-- Change as needed -->
                         <repository>David Livingstone Centre</repository><!-- Change as needed -->
                         <idno type="shelfmark">Cat 1131</idno><!-- Change as needed -->
-                        <altIdentifier>
-                            <idno type="ccnumber">Field Diaries, 028</idno><!-- This the CC number; change, as appropriate -->
-                        </altIdentifier>
                     </msIdentifier>
                     <physDesc>
                         <handDesc><!-- Add <handNote>s if needed. -->
                             <handNote xml:id="U"><label>Unknown Hand</label> This hand is unknown
-                                but thought not David Livingstone's.</handNote>
+                                but thought not to be the author's.</handNote>
                         </handDesc>
                     </physDesc>
                 </msDesc>
@@ -60,9 +67,8 @@
         </fileDesc>
         <profileDesc>
             <langUsage>
-				<!-- See LEAP encoding manual sect. 20 for language abbreviations. 
-				English should be first, then add all other languages, as appropriate, 
-				in alphabetical order. -->
+				<!-- For language abbreviations, see https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry --> 
+				<!-- English should be first, then add all other languages in alphabetical order. -->
                 <language ident="en">English</language>
             </langUsage>
         </profileDesc>
@@ -71,30 +77,19 @@
 			<!-- Note that @who initials are taken from <respStmt> above -->
 			<!-- Add new <change> elements below as needed. -->
 			<!-- Note that the most recent <change> should always be placed first, at the top -->
-            <change when="2014-05-03" who="#AW">Transcription and XML encoding</change>
+            <change when="2018-01-22" who="#AW">Transcription and TEI encoding</change>
         </revisionDesc>
     </teiHeader>
 
     <text>
-		<front>
-		<!-- Create the <front> section if necessary. Otherwise remove. -->
-		</front>
-
        	<body>
 			<div>
-				<gb/><!-- Repeat, if necessary, to mark things like changes in types of writing paper. Otherwise remove -->
 
-	<pb facs="liv_000015_0001" n="0001"/><!-- Change and repeat as necessary. -->
+	<pb facs="liv_000074_0001" n="0001"/><!-- Change and repeat as necessary. Always indent, as here. -->
 <lb/><p><!-- Text goes here --></p>
 
-	<!-- More text -->
-
 			</div>
-		</body>
-
-		<back>
-		<!-- Create the <back> section if necessary. Otherwise remove. -->
-		</back>		
+		</body>	
 
     </text>
 </TEI>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://livingstoneonline.github.io/LEAP-ODD/leap.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://livingstoneonline.github.io/LEAP-ODD/leap.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
- <?xml-stylesheet href="http://livingstoneonline.github.io/LEAP-XSLT/transcription.xsl" type="text/xsl"?>
+<?xml-stylesheet href="http://livingstoneonline.github.io/LEAP-XSLT/transcription.xsl" type="text/xsl"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="liv_000877"><!-- Change @xml:id -->
     <teiHeader>
         <fileDesc>
@@ -10,9 +10,8 @@
                 <title type="alternative">Letter to Thomas Maclear, 15 February, 2 March 1856</title><!-- Change -->
                 <author>David Livingstone</author>
                 <principal>Adrian S. Wisnicki</principal>
-                <principal>Christopher Lawrence</principal>
-                <respStmt xml:id="BL"><!-- Add or remove individuals from the list as appropriate -->
-                    <name>Blaze Livingston</name><!-- Change -->
+                <respStmt xml:id="HB"><!-- Add or remove individuals from the list as appropriate -->
+                    <name>Heather F. Ball</name><!-- Change -->
                     <resp>Transcription</resp><!-- Change, remove, or add more <resp> as appropriate -->
                     <resp>Encoding</resp>
                 </respStmt>
@@ -25,7 +24,7 @@
                 <authority>Livingstone Online</authority>
                 <publisher>University of Maryland Libraries</publisher>
                 <pubPlace>College Park, MD, USA</pubPlace>
-                <date>2016</date><!-- Change if necessary -->
+                <date>2018</date><!-- Change if necessary -->
                 <idno type="LEAP-ID">liv_000877</idno><!-- Change -->
             </publicationStmt>
             <sourceDesc>
@@ -72,30 +71,13 @@
     <text>
         <body>
             <div>
-               
+
+	<!-- Start each page with a <pb> formatted as below and indented as below -->               
 	<pb facs="liv_000877_0001" n="0001"/><!-- Change both @facs and @n -->
-	<!-- Start each page with a <pb> formatted as above -->
-
-<!-- If this is a letter or similar with an opener (with content such as dateline and/or salute) add it. For example: -->
-
-<!-- Change opener info below as appropriate --> 
-<lb/><opener><dateline rend="right"><placeName>Hadley Green</placeName><!-- Begin each line with <lb/> as here --> 
-<lb/><date when="1857-08-22">22 August
-<lb/>1857</date></dateline><!-- Change line info as appropriate -->
-<lb/>    
-<lb/><salute>My Dear Sir,</salute></opener><!-- Change line info as appropriate -->
-
 
 <lb/><p><!-- Begin transcribed text here --></p>
 
-<!-- More transcribed text -->
-
-
-<!-- If there is a letter or similar with a closer with content such as salute or signed -->
-<lb/><closer rend="right"><salute>I am &amp;</salute><!-- Change as appropriate -->
-<lb/><signed><persName>David Livingstone</persName></signed></closer><!-- Change as appropriate --> 
-
-
+<!-- More transcribed text, etc. -->
 
             </div>
         </body>
