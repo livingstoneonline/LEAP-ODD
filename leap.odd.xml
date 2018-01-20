@@ -51,7 +51,7 @@
             <div xml:id="about">
                 <head>About the Livingstone Online TEI P5 Encoding Guidelines</head>
                 <p>These guidelines (TEI P5 ODD Customization) summarize <ref type="newWindow" target="http://livingstoneonline.org">Livingstone Online</ref> project practices for encoding in <ref type="newWindow" target="http://www.tei-c.org/Guidelines/P5/">TEI P5</ref> the manuscripts of David Livingstone (1813-1873), the Victorian explorer, abolitionist, and missionary. The guidelines also offer a fairly comprehensive overview of Livingstone's practices and idiosyncrasies as a writer.</p>
-				<p>The guidelines are a product of the Livingstone Online Enrichment and Access Project (LEAP), a four-year initiative (2013-2017) funded by the National Endowment for the Humanities (USA). James Cummings with assistance from Adrian S. Wisnicki, Heather F. Ball, and Justin Livingstone created the guidelines, with the initial prose based on Livingstone Online's TEI P5 Tagging Guidelines written by Wisnicki and Heather F. Ball. Wisnicki has since further developed the guidelines based on the experiences of LEAP.</p>
+				<p>The guidelines are a product of the Livingstone Online Enrichment and Access Project (LEAP), a four-year initiative (2013-2017) funded by the National Endowment for the Humanities (USA). James Cummings with assistance from Adrian S. Wisnicki, Heather F. Ball, and Justin Livingstone created the guidelines, with the initial prose based on Livingstone Online's TEI P5 Tagging Guidelines (2010-13) written by Wisnicki and Ball. Wisnicki has since further developed the guidelines based on the experiences of LEAP.</p>
 				<p>Significant contributions to the development of the guidelines have also come from the LEAP critical encoding team: Angela Aliff, Mary Borgo, Erin Cheatham, Samantha Fitch, Ashanka Kumari, Chris Lawrence, Anne Martin, Jared McDonald, Alexander Munson, Kate Simpson, and Megan Ward (critical encoding director).</p>
 				<p>The guidelines are released under a <ref type="newWindow" target="https://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported</ref> license, and we encourage broad, non-commercial use of the guidelines per the open educational remit of <ref type="newWindow" target="http://livingstoneonline.org">Livingstone Online</ref>.</p>
             </div>
@@ -121,7 +121,7 @@
                             <label rend="italics">Original text:</label>
                             <eg>we saw the Lualaba</eg>
                             <label rend="italics">Marked up:</label>
-                            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">we saw the <placeName><geogName>Lualaba</geogName></placeName></egXML>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><note place="marginleft"><date when="1871-05-08">8th</date></note></egXML>
                         </item>
 
                         <item><p>An attribute is always accompanied by a value, for instance:
@@ -446,8 +446,6 @@ change, remove, or add more <resp> as appropriate below -->
                         and should have the proper ISO 639 language code for the language. See <ptr
                             target="#foreign-words"/>. </p>
 
-
-
                     <p>Definitions of the elements used above are: <specList>
                             <specDesc key="profileDesc"/>
                             <specDesc key="langUsage"/>
@@ -598,7 +596,7 @@ Note that the most recent <change> should always be placed first, at the top -->
             <div xml:id="paragraph">
                 <head>The Beginning of a New Paragraph</head>
                 <p>When you start a new paragraph, use the following tag: <gi>p</gi>. The <att>rend</att> attribute is used to indicate information about the rendering of the paragraph as a whole in the original source:
-<egXML xmlns="http://www.tei-c.org/ns/Examples"><p rend="upside-down">This paragraph is upside-down in the original</p></egXML>
+<egXML xmlns="http://www.tei-c.org/ns/Examples"><p rend="upside-down">This paragraph is upside-down in the original.</p></egXML>
                 For more information about the <att>rend</att> attribute see <ptr
                         target="#formatting"/>.</p>
                 <p>The default assumption is that a paragraph is indented, so there is no need
@@ -718,7 +716,7 @@ contained within a <gi>salute</gi> tag and any signature within a <gi>signed</gi
 				<p>The <gi>date</gi> and <gi>persName</gi> elements are discussed in
                     more detail below.</p>
 
-<!-- Old list of element definitions -->postal address
+<!-- Old list of element definitions -->
 <!--                <p>Definitions of the elements used above are: <specList>
                         <specDesc key="opener"/>
                         <specDesc key="dateline"/>
@@ -1289,7 +1287,7 @@ word</del><add place="over-text" hand="#DL">Livingstone’s correction</add></su
                 </div>
                 
             <div xml:id="notes">
-                <head>Authorial Notes within the Text</head>
+                <head>Authorial Notes Within the Text</head>
                 
                 <p>Use the <gi>note</gi> element anytime Livingstone himself inserts a note, gloss, or footnote outside the body of the main text that explains an item within the main text.
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">the whole tribe x 
@@ -1445,7 +1443,7 @@ April <lb/>1866</date></note> alone but other nations feel</egXML>
                 </p>
                 <p><hi rend="bold">Note:</hi> this also includes the normalization of proper nouns:
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">The <term type="tribe"><choice><orig>Suaheli</orig><reg>Swahili</reg></choice></term></egXML>
-					<egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">The <placeName><geogName type="river"><choice><orig>Chambeze</orig><reg>Chambezi</reg></choice></geogName></placeName></egXML>
+					<egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">The <geogName type="river"><choice><orig>Chambeze</orig><reg>Chambezi</reg></choice></geogName></egXML>
                 </p>
 				<p>Definitions of the elements used above are: <specList>
                         <specDesc key="choice"/>
@@ -1556,7 +1554,7 @@ April <lb/>1866</date></note> alone but other nations feel</egXML>
             <div xml:id="place-names">
                 <head>Place Names and Geographical Elements</head>
 
-                <p>When you mark up a placeName and your are certain of its identity, use <hi rend="underline">only</hi> one of the following: <gi>bloc</gi> (for multi-national
+                <p>When you mark up a placeName and your are <hi rend="underline">certain of its identity</hi>, use only one of the following: <gi>bloc</gi> (for multi-national
                     entities like "Africa"), <gi>country</gi> (for countries), <gi>region</gi> (for
                     large administrative units), or <gi>settlement</gi> (for cities, towns,
                     villages). For <gi>settlement</gi> use the <att>type</att> attribute to record
@@ -1565,7 +1563,7 @@ April <lb/>1866</date></note> alone but other nations feel</egXML>
                 </p>
                 <p>If the place is a geographical entity, use <gi>geogName</gi> to denote the specific entity and use the <att>type</att> attribute with values such as "<val>lake</val>", "<val>river</val>", etc. 
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><geogName type="river">Nile</geogName></egXML>
-                If you cannot determine the value for the geographical entity, then use the <gi>geogName</gi> tag alone: 
+                If you cannot determine the value for the geographical entity, then use the <gi>geogName</gi> tag without any attributes: 
                 <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><geogName>Koribelo</geogName></egXML></p>
                 <p>If you know a term refers to a place, but you cannot make any more specific determination per the foregoing guidelines, use <gi>placeName</gi> only:
 					<egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><placeName>Fleet Street</placeName></egXML>
@@ -1590,7 +1588,7 @@ April <lb/>1866</date></note> alone but other nations feel</egXML>
                     incorrect). Code "Zanzibar" as follows:</p>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><geogName type="island">Zanzibar</geogName></egXML>
                 <p>Directional words (North, South, East, and West) should not be tagged when referring to directions. Rather tag directional words only when Livingstone uses them to designate a region:</p>
-                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><region>South of <placeName><geogName type="lake">Lake Nyassa</geogName></placeName></region></egXML>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><region>South of <geogName type="lake">Lake Nyassa</geogName></region></egXML>
                 <p>Definitions of the elements used above are: <specList>
                         <specDesc key="placeName"/>
                         <specDesc key="bloc"/>
@@ -1774,12 +1772,12 @@ and <measure>1000 yards across</measure></measure></egXML>
                 <head>Organizations and Other Groups</head>
                 
                 <p>Use the <gi>orgName</gi> element to mark instances in the text where there is mention of an organization or other type of group (or any reference to an individual as being part of a group) that is not covered by <ptr target="#nationalities"/>, <ptr target="#people"/>, or <ptr target="#ethnic-groups"/>. Note that all the following entities should be marked with the <gi>orgName</gi> element: Aborigine, Aborigines, African, Africans, Arab, Arabs, Banian, Banians, Boer, Boers, Bushman, Bushmen, Caffre (or the variant spellings, Kaffre and Kaffir), Caffres (or the variant spellings, Kaffres and Kaffirs), Christian (an individual; for use of Christian as an adjective, see <ptr target="#faiths"/>), Christians, European, Europeans, Griqua, Moslem (an individual; for use of Moslem as an adjective, see <ptr target="#faiths"/>), and Moslems. For references to organized religions (e.g., Christianity, Islam), see <ptr target="#faiths"/>.</p> 
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">the <orgName>bLondon Missionary Society</orgName></egXML>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">the <orgName>London Missionary Society</orgName></egXML>
 					<egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><orgName>African</orgName> villages</egXML>
 					<egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">I spoke with the <orgName>Arab</orgName></egXML>
                 <p>"Johanna men" and "Nassick boys" (and all variants of these two groups) to be coded as follows:</p>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><orgName><placeName><geogName type="island">Johanna</geogName></placeName> men</orgName></egXML>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><orgName><placeName><settlement type="city">Nassick</settlement></placeName> boys</orgName></egXML>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><orgName><geogName type="island">Johanna</geogName> men</orgName></egXML>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><orgName><settlement type="city">Nassick</settlement> boys</orgName></egXML>
                 <p><hi rend="bold">Note:</hi> All references to "slaves" and "slavery" should also be marked with <gi>orgName</gi> as should references to "caste," "freemen," "free men," "natives," "cannibals," and "flesh eaters":</p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">He had two <orgName>slaves</orgName> and spoke of <orgName>slavery</orgName></egXML>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">It is believed by the <orgName>natives</orgName>.</egXML>
@@ -1819,7 +1817,7 @@ and <measure>1000 yards across</measure></measure></egXML>
 			<p>Use <gi>bibl</gi> to encode any elements of a book, including the title, that Livingstone references:</p>
 			<egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><bibl>Genesis</bibl></egXML>
                 <p>Also use <gi>bibl</gi> to encode any mention of letters or manuscripts, including Livingstone's own:
-                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><lb/><bibl>Letters from <placeName><settlement type="city">Mecca</settlement></placeName></bibl> told of its coming</egXML>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><lb/><bibl>Letters from <settlement type="city">Mecca</settlement></bibl> told of its coming</egXML>
                     or
 <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><lb/>he assures me that my <bibl>packet of letters</bibl> was not destroyed</egXML></p>
 				<p>Definitions of the elements used above are: <specList>
@@ -1922,7 +1920,7 @@ and <measure>1000 yards across</measure></measure></egXML>
 				<p>If your description of the figure cites any text that Livingstone himself has provided and that text in turn can be coded, then it should be coded directly in the citation:
                     <egXML xmlns="http://www.tei-c.org/ns/Examples">The <term type="animal">lion</term> looked like this: <figure><head>Lion</head>
 <figDesc>Drawing of a lion with it's mouth open 
-towards the viewer, with a note from Livingstone that he saw this lion "in the <placeName><geogName type="desert">Kalahari</geogName></placeName>."</figDesc>
+towards the viewer, with a note from Livingstone that he saw this lion "in the <geogName type="desert">Kalahari</geogName>."</figDesc>
 </figure></egXML>
 				</p>
                 <p>Definitions of the elements used above are: <specList>
