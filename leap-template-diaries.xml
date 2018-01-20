@@ -9,20 +9,29 @@
                 <title>Field Diary XV, 7 July 1872-1 December 1872</title><!-- Change -->
                 <author>David Livingstone</author>
                 <principal>Adrian S. Wisnicki</principal>
-                <respStmt xml:id="AW"><!-- Add or remove individuals from the list as appropriate -->
-                    <name>Adrian S. Wisnicki</name><!-- Change -->
+                <respStmt xml:id="AM"><!-- Add or remove individuals from the list as appropriate -->
+                    <name>Anne Martin</name><!-- Change -->
                     <resp>Transcription</resp><!-- Change, remove, or add more <resp> as appropriate -->
                     <resp>TEI Encoding</resp>
                     <resp>Editorial Decisions</resp>
 					<resp>Proofing</resp>
-					<resp>Encoding Review</resp>
+					<resp>Coding Review</resp>
                 </respStmt>
-                <respStmt xml:id="MW">
-                    <name>Megan Ward</name>
+				<respStmt xml:id="HB">
+                    <name>Heather F. Ball</name>
                     <resp>Transcription</resp>
                     <resp>TEI Encoding</resp>
                     <resp>Editorial Decisions</resp>
 					<resp>Proofing</resp>
+					<resp>Coding Review</resp>
+                </respStmt>
+                <respStmt xml:id="AW">
+                    <name>Adrian S. Wisnicki</name>
+                    <resp>Transcription</resp>
+                    <resp>TEI Encoding</resp>
+                    <resp>Editorial Decisions</resp>
+					<resp>Proofing</resp>
+					<resp>Coding Review</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
@@ -60,9 +69,8 @@
         </fileDesc>
         <profileDesc>
             <langUsage>
-				<!-- See LEAP encoding manual sect. 20 for language abbreviations. 
-				English should be first, then add all other languages, as appropriate, 
-				in alphabetical order. -->
+				<!-- For language abbreviations, see https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry --> 
+				<!-- English should be first, then add all other languages in alphabetical order. -->
                 <language ident="en">English</language>
             </langUsage>
         </profileDesc>
@@ -71,7 +79,7 @@
 			<!-- Note that @who initials are taken from <respStmt> above -->
 			<!-- Add new <change> elements below as needed. -->
 			<!-- Note that the most recent <change> should always be placed first, at the top -->
-            <change when="2014-05-03" who="#AW">Transcription and XML encoding</change>
+            <change when="2018-01-22" who="#AW">Transcription and TEI encoding</change>
         </revisionDesc>
     </teiHeader>
 

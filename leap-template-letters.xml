@@ -10,14 +10,29 @@
                 <title type="alternative">Letter to Thomas Maclear, 15 February, 2 March 1856</title><!-- Change -->
                 <author>David Livingstone</author>
                 <principal>Adrian S. Wisnicki</principal>
-                <respStmt xml:id="HB"><!-- Add or remove individuals from the list as appropriate -->
-                    <name>Heather F. Ball</name><!-- Change -->
+                <respStmt xml:id="AM"><!-- Add or remove individuals from the list as appropriate -->
+                    <name>Anne Martin</name><!-- Change -->
                     <resp>Transcription</resp><!-- Change, remove, or add more <resp> as appropriate -->
-                    <resp>Encoding</resp>
+                    <resp>TEI Encoding</resp>
+                    <resp>Editorial Decisions</resp>
+					<resp>Proofing</resp>
+					<resp>Coding Review</resp>
+                </respStmt>
+				<respStmt xml:id="HB">
+                    <name>Heather F. Ball</name>
+                    <resp>Transcription</resp>
+                    <resp>TEI Encoding</resp>
+                    <resp>Editorial Decisions</resp>
+					<resp>Proofing</resp>
+					<resp>Coding Review</resp>
                 </respStmt>
                 <respStmt xml:id="AW">
                     <name>Adrian S. Wisnicki</name>
-                    <resp>Coding review</resp>
+                    <resp>Transcription</resp>
+                    <resp>TEI Encoding</resp>
+                    <resp>Editorial Decisions</resp>
+					<resp>Proofing</resp>
+					<resp>Coding Review</resp>
                 </respStmt>
             </titleStmt>	
             <publicationStmt>
@@ -56,15 +71,17 @@
         </fileDesc>
         <profileDesc>
             <langUsage>
+				<!-- For language abbreviations, see https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry --> 
+				<!-- English should be first, then add all other languages in alphabetical order. -->
                 <language ident="en">English</language>
-				<!-- See LEAP encoding manual sect. 20 for language abbreviations. English should be first,
-				then add all other languages, as appropriate, in alphabetical order. -->
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change when="2016-02-14" who="#AM">Initial transcription and XML encoding</change>
+			<!-- Change @when, @who, and work description below. -->
 			<!-- Note that @who initials are taken from <respStmt> above -->
-			<!-- Most recent <change> should always be placed first -->
+			<!-- Add new <change> elements below as needed. -->
+			<!-- Note that the most recent <change> should always be placed first, at the top -->
+            <change when="2018-01-22" who="#AW">Transcription and TEI encoding</change>
         </revisionDesc>
     </teiHeader>
 

@@ -85,7 +85,7 @@
        	<body>
 			<div>
 
-	<pb facs="liv_000074_0001" n="0001"/><!-- Change and repeat as necessary. Always indent, as here. -->
+	<pb facs="liv_000074_0001" n="0001"/><!-- Change and repeat as necessary. Always indent <pb>, as here. -->
 <lb/><p><!-- Text goes here --></p>
 
 			</div>
