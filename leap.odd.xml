@@ -1463,9 +1463,9 @@ April <lb/>1866</date></note> alone but other nations feel</egXML>
 
                 <p>When you transcribe an ampersand, use <code>&amp;amp;</code> instead of an actual
                     ampersand: <label rend="italic">Original text:</label>
-                    <eg>I saw John &amp; Jim</eg>
+                    <eg>I saw one man &amp; one woman</eg>
                     <label rend="italic">Marked up:</label>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">I saw John <?entity amp?> Jim</egXML>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">I saw one man &amp; one woman</egXML>
                 </p>
 
                 <p>If you come across any other unusual characters that are not found within the
