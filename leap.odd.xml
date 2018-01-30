@@ -963,7 +963,7 @@ contained within a <gi>salute</gi> tag and any signature within a <gi>signed</gi
                         </egXML></p>-->
                     <p>Definitions of the elements used above are: <specList>
 						<specDesc key="lb"/>
-                        <specDesc key="space" atts="extent unit"/>
+                        <specDesc key="space"/>
                     </specList>
                     </p>
                 </div>
