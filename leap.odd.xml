@@ -1778,16 +1778,16 @@ and <measure>1000 yards across</measure></measure></egXML>
                 <p>"Johanna men" and "Nassick boys" (and all variants of these two groups) to be coded as follows:</p>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><orgName><geogName type="island">Johanna</geogName> men</orgName></egXML>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><orgName><settlement type="city">Nassick</settlement> boys</orgName></egXML>
-                <p><hi rend="bold">Note:</hi> All references to "slaves" and "slavery" should also be marked with <gi>orgName</gi> as should references to "caste," "freemen," "free men," "natives," "cannibals," and "flesh eaters":</p>
+                <!--<p><hi rend="bold">Note:</hi> All references to "slaves" and "slavery" should also be marked with <gi>orgName</gi> as should references to "caste," "freemen," "free men," "natives," "cannibals," and "flesh eaters":</p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">He had two <orgName>slaves</orgName> and spoke of <orgName>slavery</orgName></egXML>
-                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">It is believed by the <orgName>natives</orgName>.</egXML>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">It is believed by the <orgName>natives</orgName>.</egXML>-->
                 <p><hi rend="bold">Please note: </hi> Havildar and Sepoy (singular and plural) should be marked with both <gi>orgName</gi>, and <gi>term</gi> with the <att>type</att> attribute and a value of "<val>occupation</val>":</p>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><orgName><term type="occupation">Havildar</term></orgName></egXML>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><orgName><term type="occupation">Sepoys</term></orgName></egXML>
-                <p>Groups relating to a specific person should also be marked with <gi>orgName</gi>:</p>
+                <!--<p>Groups relating to a specific person should also be marked with <gi>orgName</gi>:</p>
                 <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><lb/><orgName><persName>Emboro</persName>'s men</orgName>
 					</egXML>
-                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><lb/>from depositions of survivors of <orgName><persName>Baron</persName>'s party</orgName></egXML>
+                <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><lb/>from depositions of survivors of <orgName><persName>Baron</persName>'s party</orgName></egXML>-->
 				<p>Definitions of the elements used above are: <specList>
                         <specDesc key="orgName"/>
                         <specDesc key="term" atts="type"/>
