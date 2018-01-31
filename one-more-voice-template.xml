@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://livingstoneonline.github.io/LEAP-ODD/leap.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://livingstoneonline.github.io/LEAP-ODD/leap.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<?xml-stylesheet href="http://livingstoneonline.github.io/LEAP-XSLT/transcription.xsl" type="text/xsl"?>
+<?xml-stylesheet href="http://livingstoneonline.github.io/LEAP-XSLT/transcription-omv.xsl" type="text/xsl"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="liv_000074"><!-- Change @xml:id -->
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Field Diary</title><!-- Change -->
-                <title type="alternate">Field Diary, 7 July 1872-1 December 1872</title><!-- Change; note addition of date -->
-                <author>David Livingstone</author>
+                <title>Extract from Diary</title><!-- Change -->
+                <title type="alternate">Extract from Diary, May-June 1873</title><!-- Change; note addition of date -->
+                <author>Wainwright, Jacob, ?-1892</author><!-- Change -->
                 <principal>Adrian S. Wisnicki</principal>
                 <respStmt xml:id="AM">
                     <name>Anne Martin</name>
@@ -48,7 +48,7 @@
                         <country>United Kingdom</country><!-- Change as needed -->
                         <settlement>Blantyre</settlement><!-- Change as needed -->
                         <repository>David Livingstone Centre</repository><!-- Change as needed -->
-                        <idno type="shelfmark">Cat 1131</idno><!-- Change as needed -->
+                        <idno type="shelfmark">801</idno><!-- Change as needed -->
                     </msIdentifier>
                     <physDesc>
                         <handDesc><!-- Add <handNote>s if needed. -->
@@ -58,10 +58,10 @@
                     </physDesc>
                 </msDesc>
                 <bibl type="sourceMetadata">
-                    <title>Field Diary XV, 7 July 1872 - 1 December 1872</title><!-- Change -->
+                    <title>Extract from Diary</title><!-- Change -->
                     <author xml:id="DL">David Livingstone</author>
-                    <date type="composition" from="1872-07-07" to="1872-12-01">7 July 1872 - 1 December 1872</date><!-- Change -->
-                    <placeName type="compositionPlace">East Africa</placeName><!-- Change -->
+                    <date type="composition" from="1873-05-01" to="1873-06-01">May-June 1873</date><!-- Change, including attributes -->
+                    <placeName type="compositionPlace">[East Africa]</placeName><!-- Change -->
                 </bibl>
             </sourceDesc>
         </fileDesc>
@@ -77,7 +77,7 @@
 			<!-- Note that @who initials are taken from <respStmt> above -->
 			<!-- Add new <change> elements below as needed. -->
 			<!-- Note that the most recent <change> should always be placed first, at the top -->
-            <change when="2018-01-22" who="#AW">Transcription and TEI encoding</change>
+            <change when="2018-01-31" who="#AM">Transcription and TEI encoding</change>
         </revisionDesc>
     </teiHeader>
 
