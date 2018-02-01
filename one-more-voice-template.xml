@@ -59,7 +59,7 @@
                 </msDesc>
                 <bibl type="sourceMetadata">
                     <title>Extract from Diary</title><!-- Change -->
-                    <author xml:id="DL">David Livingstone</author>
+                    <author xml:id="DL">Wainwright, Jacob, ?-1892</author>
                     <date type="composition" from="1873-05-01" to="1873-06-01">May-June 1873</date><!-- Change, including attributes -->
                     <placeName type="compositionPlace">[East Africa]</placeName><!-- Change -->
                 </bibl>
