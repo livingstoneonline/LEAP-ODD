@@ -2606,6 +2606,9 @@ This hand belongs to Charles Livingstone.</handNote></egXML>
                                     <valItem ident="dotted-line">
                                         <desc>rendering is of a dotted line</desc>
                                     </valItem>
+                                    <valItem ident="dotted-underline">
+                                        <desc>dotted underline</desc>
+                                    </valItem>
                                     <valItem ident="double-line">
                                         <desc>rendering is of a double line</desc>
                                     </valItem>
