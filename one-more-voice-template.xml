@@ -2,12 +2,12 @@
 <?xml-model href="http://livingstoneonline.github.io/LEAP-ODD/leap.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://livingstoneonline.github.io/LEAP-ODD/leap.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-stylesheet href="http://livingstoneonline.github.io/LEAP-XSLT/transcription-omv.xsl" type="text/xsl"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="liv_000074"><!-- Change @xml:id -->
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="liv_000085"><!-- Change @xml:id -->
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Extract from Diary</title><!-- Change -->
-                <title type="alternate">Extract from Diary, May-June 1873</title><!-- Change; note addition of date -->
+                <title>Letter to William O. Livingstone</title><!-- Change -->
+                <title type="alternate">Letter to William O. Livingstone, October 1873</title><!-- Change; note addition of date -->
                 <author>Wainwright, Jacob, ?-1892</author><!-- Change -->
                 <principal>Adrian S. Wisnicki</principal>
                 <respStmt xml:id="AM">
@@ -18,14 +18,13 @@
 					<resp>Proofing</resp>
 					<resp>Coding Review</resp>
                 </respStmt>
-				<respStmt xml:id="HB">
+                <respStmt xml:id="HB">
                     <name>Heather F. Ball</name>
                     <resp>Transcription</resp>
                     <resp>TEI Encoding</resp>
                     <resp>Editorial Decisions</resp>
 					<resp>Proofing</resp>
 					<resp>Coding Review</resp>
-                </respStmt>
                 <respStmt xml:id="AW">
                     <name>Adrian S. Wisnicki</name>
                     <resp>Transcription</resp>
@@ -40,15 +39,15 @@
                 <publisher>University of Maryland Libraries</publisher>
                 <pubPlace>College Park, MD, USA</pubPlace>
                 <date>2018</date><!-- Change if necessary -->
-                <idno type="LEAP-ID">liv_000074</idno><!-- Change -->
+                <idno type="LEAP-ID">liv_000085</idno><!-- Change -->
             </publicationStmt>
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <country>United Kingdom</country><!-- Change as needed -->
-                        <settlement>Blantyre</settlement><!-- Change as needed -->
+                        <country type="repository">United Kingdom</country><!-- Change as needed -->
+                        <settlement type="repository">Blantyre</settlement><!-- Change as needed -->
                         <repository>David Livingstone Centre</repository><!-- Change as needed -->
-                        <idno type="shelfmark">801</idno><!-- Change as needed -->
+                        <idno type="shelfmark">836</idno><!-- Change as needed -->
                     </msIdentifier>
                     <physDesc>
                         <handDesc><!-- Add <handNote>s if needed. -->
@@ -58,10 +57,10 @@
                     </physDesc>
                 </msDesc>
                 <bibl type="sourceMetadata">
-                    <title>Extract from Diary</title><!-- Change -->
-                    <author xml:id="DL">Wainwright, Jacob, ?-1892</author>
-                    <date type="composition" from="1873-05-01" to="1873-06-01">May-June 1873</date><!-- Change, including attributes -->
-                    <placeName type="compositionPlace">[East Africa]</placeName><!-- Change -->
+                    <title>Letter to William O. Livingstone</title><!-- Change -->
+                    <author xml:id="JW">Wainwright, Jacob, ?-1892</author><!-- Change -->
+                    <date type="composition" when="1873-10">October 1873</date><!-- Change, including attributes -->
+                    <placeName type="compositionPlace">Ukhonongo</placeName><!-- Change -->
                 </bibl>
             </sourceDesc>
         </fileDesc>
@@ -77,15 +76,15 @@
 			<!-- Note that @who initials are taken from <respStmt> above -->
 			<!-- Add new <change> elements below as needed. -->
 			<!-- Note that the most recent <change> should always be placed first, at the top -->
-            <change when="2018-01-31" who="#AM">Transcription and TEI encoding</change>
+            <change when="2018-03-01" who="#AW">Transcription and TEI encoding</change>
         </revisionDesc>
     </teiHeader>
 
     <text>
-       	<body>
-			<div>
+       	<body n="ceac89"><!-- Change; this is the color of the MS page; value can be any color -->
+			<div rend="brown"><!-- Change; this is the color of the writing; only use auto-suggested values -->
 
-	<pb facs="liv_000074_0001" n="0001"/><!-- Change and repeat as necessary. Always indent <pb>, as here. -->
+	<pb facs="liv_000085_0001" n="0001"/><!-- Change and repeat as necessary. Always indent <pb>, as here. -->
 <lb/><p><!-- Text goes here --></p>
 
 			</div>
