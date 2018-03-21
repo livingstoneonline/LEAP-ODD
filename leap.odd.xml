@@ -842,11 +842,12 @@ contained within a <gi>salute</gi> tag and any signature within a <gi>signed</gi
                     one can do:
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><placeName rend="underline"><geogName type="river">Lualaba</geogName></placeName></egXML>
                     but if unsure then the former is acceptable.</p>
-				<p><hi rend="bold">Also Note:</hi> Please don't use <tag>rend="left"</tag>, <tag>rend="right"</tag>, and <tag>rend="center"</tag> to place things on page. In other words, you should avoid coding like the following: <tag>p rend="right"</tag>, <tag>lb rend="right"/</tag>, <tag>seg rend="right"</tag> etc. For futher guidance on using <tag>space/</tag>, see <ptr target="#extra-space"/>. If something is left, no <tag>rend=”left”</tag> is necessary.</p>
+				<p><hi rend="bold">Also Note:</hi> Please don't use <tag>rend="left"</tag>, <tag>rend="right"</tag>, and <tag>rend="center"</tag> to position things horizontally on the page. In other words, you should avoid coding like the following: <tag>p rend="right"</tag>, <tag>lb rend="right"/</tag>, <tag>seg rend="right"</tag> etc. Instead, use the <tag>space/</tag> (see <ptr target="#extra-space"/>). If something is placed on the left, no <tag>rend="left"</tag> is necessary.</p>
 
 				
                 <p>Definitions of the elements used above are: <specList>
                         <specDesc key="hi" atts="rend"/>
+						<specDesc key="space"/>
                     </specList>
                 </p>
             </div>
@@ -953,12 +954,13 @@ contained within a <gi>salute</gi> tag and any signature within a <gi>signed</gi
 				and
 				<egXML xmlns="http://www.tei-c.org/ns/Examples"><space extent="1" unit="chars"/></egXML>
 				
-				Position the element roughly using the "words" variant, then fine tune with "chars".</p>
+				Position the element roughly using the "words" variant, then fine-tune with "chars".</p>
 
 				<p>The only exception for this rule is <gi>milestone</gi>, where you can use <tag>rend="center"</tag> and <tag>rend="right"</tag> to position shorter lines (e.g., "half-line", "quarter-line", etc.) across the page.</p>
 
                 <p>Definitions of the elements used above are: <specList>
                         <specDesc key="space" atts="extent unit"/>
+						<specDesc key="milestone" atts="rend"/>
                     </specList>
                 </p>
             </div>
@@ -999,8 +1001,8 @@ contained within a <gi>salute</gi> tag and any signature within a <gi>signed</gi
 <lb/><!-- blank page AM --></egXML>
 				In other words, code the page break per normal practice, then add one <tag>lb/</tag> with a comment indicating that it is a blank page.</p>
                     <p>Definitions of the elements used above are: <specList>
-						<specDesc key="lb"/>
 						<specDesc key="pb"/>
+						<specDesc key="lb"/>
                         <specDesc key="space"/>
                     </specList>
                     </p>
@@ -1587,6 +1589,7 @@ April <lb/>1866</date></note> alone but other nations feel</egXML>
                 <p>Definitions of the elements used above are: <specList>
                         <specDesc key="persName"/>
                         <specDesc key="roleName"/>
+						<specDesc key="term" atts="type"/>
                     </specList>
                 </p>
             </div>
@@ -1791,6 +1794,7 @@ and <measure>1000 yards across</measure></measure></egXML>
                     </p>
 				<p>Definitions of the elements used above are: <specList>
                             <specDesc key="term" atts="type"/>
+							<specDesc key="roleName"/>
                         </specList>
                     </p>
                     
