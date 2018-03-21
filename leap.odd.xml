@@ -25,6 +25,7 @@
             </sourceDesc>
         </fileDesc>
         <revisionDesc status="draft">
+			<change when="2018-03-21" who="#AW">Further updating for "One More Voice"</change>
 			<change when="2018-01-19" who="#AW">Updating for "One More Voice"</change>
 			<change when="2015-03-25" who="#HB">Additional corrections and expansion</change>
             <change when="2015-03-14" who="#JL">Additional corrections</change>
@@ -586,6 +587,7 @@ Note that the most recent <change> should always be placed first, at the top -->
 				<p>If line breaks occur in the middle of an addition, do not place <tag>lb/</tag> before the first line of the addition, but do use it to mark the beginning of each subsequent line of the addition:
                 <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><add place="marginleft">First line of addition <lb/>second line, <lb/>and third line.</add></egXML>
 				</p>
+				<p><hi rend="bold">Note:</hi> Please do not mark blank space at the end of a page with a series of <tag>lb/</tag> tags. Once the text (and/or material features) on a given page ends, you do not need to record any space beyond unless it has some clear semantic value. If unsure, leave a comment asking for further review.</p>
                 <p>Definitions of the elements used above are: <specList>
                         <specDesc key="lb"/>
                     </specList>
@@ -836,7 +838,10 @@ contained within a <gi>salute</gi> tag and any signature within a <gi>signed</gi
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><hi rend="underline"><geogName type="river">Lualaba</geogName></hi></egXML>
                     one can do:
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><placeName rend="underline"><geogName type="river">Lualaba</geogName></placeName></egXML>
-                    but if unsure then the former is acceptable. </p>
+                    but if unsure then the former is acceptable.</p>
+				<p><hi rend="bold">Also Note:</hi> Please don't use <tag>rend="left"</tag>, <tag>rend="right"</tag>, and <tag>rend="center"</tag> to place things on page. In other words, you should avoid coding like the following: <tag>p rend="right"</tag>, <tag>lb rend="right"/</tag>, <tag>seg rend="right"</tag> etc. For futher guidance on using <tag>space/</tag>, see <ptr target="#extra-space"/>. If something is left, no <tag>rend=”left”</tag> is necessary.</p>
+
+				
                 <p>Definitions of the elements used above are: <specList>
                         <specDesc key="hi" atts="rend"/>
                     </specList>
@@ -930,8 +935,19 @@ contained within a <gi>salute</gi> tag and any signature within a <gi>signed</gi
 				<p>The value "<val>chars</val>" stands for "characters"; you can
                     also use "<val>words</val>". There is a <att>dim</att> attribute on
                         <gi>space</gi> with allowed values of "<val>horiztonal</val>" or
-                        "<val>vertical</val>". The default assumption in LEAP is that extra space is
+                        "<val>vertical</val>", but the default assumption in LEAP is that extra space is
                     horizontal so this does not need to be marked.</p>
+
+				<p>To position things horizontally on the page, use variants of the <tag>space/</tag> tag: 
+				
+				<egXML xmlns="http://www.tei-c.org/ns/Examples"><space extent="1" unit="words"/></egXML>
+				and
+				<egXML xmlns="http://www.tei-c.org/ns/Examples"><space extent="1" unit="chars"/></egXML>
+				
+				Position the element roughly using the "words" variant, then fine tune with "chars".</p>
+
+				<p>The only exception for this rule is <gi>milestone</gi>, where you can use <tag>rend="center"</tag> and <tag>rend="right"</tag> to position shorter lines (e.g., "half-line", "quarter-line", etc.) across the page.</p>
+
                 <p>Definitions of the elements used above are: <specList>
                         <specDesc key="space" atts="extent unit"/>
                     </specList>
@@ -948,7 +964,6 @@ contained within a <gi>salute</gi> tag and any signature within a <gi>signed</gi
 <lb/>
 <lb/>
 <lb/><p>Called at <persName>Mataka</persName>'s house ...</p></egXML></p>
-
 						
 <!-- Old space between lines coding -->
 <!--<p>If there is more than one space between lines, a <tag>space/</tag> tag is used, 
@@ -963,6 +978,20 @@ contained within a <gi>salute</gi> tag and any signature within a <gi>signed</gi
                         </egXML></p>-->
                     <p>Definitions of the elements used above are: <specList>
 						<specDesc key="lb"/>
+                        <specDesc key="space"/>
+                    </specList>
+                    </p>
+                </div>
+
+                <div xml:id="space-on-blank-pages">
+                    <head>Space on Blank Pages</head>
+                    <p>When a page is blank, code it as follows:
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">	<pb facs="liv_000074_0002" n="0002"/>
+<lb/><!-- blank page AM --></egXML>
+				In other words, code the page break per normal practice, then add one <tag>lb/</tag> with a comment indicating that it is a blank page.</p>
+                    <p>Definitions of the elements used above are: <specList>
+						<specDesc key="lb"/>
+						<specDesc key="pb"/>
                         <specDesc key="space"/>
                     </specList>
                     </p>
