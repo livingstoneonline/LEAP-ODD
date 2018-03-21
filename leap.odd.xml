@@ -587,7 +587,7 @@ Note that the most recent <change> should always be placed first, at the top -->
 				<p>If line breaks occur in the middle of an addition, do not place <tag>lb/</tag> before the first line of the addition, but do use it to mark the beginning of each subsequent line of the addition:
                 <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><add place="marginleft">First line of addition <lb/>second line, <lb/>and third line.</add></egXML>
 				</p>
-				<p><hi rend="bold">Note:</hi> Please do not mark blank space at the end of a page with a series of <tag>lb/</tag> tags. Once the text (and/or material features) on a given page ends, you do not need to record any space beyond unless it has some clear semantic value. If unsure, leave a comment asking for further review.</p>
+				<p><hi rend="bold">Note:</hi> Please do not mark blank space at the end of a page with a series of <tag>lb/</tag> tags. Once the text and/or material features on a given page end, you do not need to record any space beyond unless it has some clear semantic value. If unsure, leave a comment asking for further review by the project team.</p>
                 <p>Definitions of the elements used above are: <specList>
                         <specDesc key="lb"/>
                     </specList>
@@ -794,15 +794,15 @@ contained within a <gi>salute</gi> tag and any signature within a <gi>signed</gi
             </div>
             
             <div xml:id="running-header">
-                <head>Running Header and Footers (including Authorial Page Numbers and Catch Words)</head>
+                <head>Running Headers and Footers (including Authorial Page Numbers and Catch Words)</head>
                 
                 <p>Use the <gi>fw</gi> element to contain any type of running text (except for catch words) that appears in the header or footer of a page or series of pages.
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><fw>1</fw></egXML>
-				You should use the <tag>space/</tag> tag to position the element horizontally on the page (see <ptr target="#extra-space"/>.
+				You should use the <tag>space/</tag> tag to position the element horizontally on the page (see <ptr target="#extra-space"/>).
                 </p>
 				<p>For any page numbers instituted by Livingstone himself, use the <gi>fw</gi> element plus <att>n</att> in the following manner:</p>									<egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><fw n="heading_XIV">XIV</fw></egXML>
 				<p>In other words, whenever <gi>fw</gi> is used to encode one of Livingstone's page numbers, <att>n</att> value should begin with "heading_" followed by the number Livingstone uses, in the form that he uses it (i.e., Roman or Arabic numeral).</p>
-				<p>For catch words, i.e, words that appear at the foot of a page and duplicate the first word of the following page, do not use <gi>fw</gi>. Instead mark the catch words with <tag>seg type="catch"</tag>.</p>
+				<p>For catch words, i.e., words that appear at the foot of a page and duplicate the first word of the following page, do not use <gi>fw</gi>. Instead mark the catch words with <tag>seg type="catch"</tag>.</p>
                 <p>Definitions of the elements used above are: <specList>
                         <specDesc key="fw" atts="rend"/>
 						<specDesc key="seg" atts="type"/>
@@ -842,7 +842,7 @@ contained within a <gi>salute</gi> tag and any signature within a <gi>signed</gi
                     one can do:
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><placeName rend="underline"><geogName type="river">Lualaba</geogName></placeName></egXML>
                     but if unsure then the former is acceptable.</p>
-				<p><hi rend="bold">Also Note:</hi> Please don't use <tag>rend="left"</tag>, <tag>rend="right"</tag>, and <tag>rend="center"</tag> to position things horizontally on the page. In other words, you should avoid coding like the following: <tag>p rend="right"</tag>, <tag>lb rend="right"/</tag>, <tag>seg rend="right"</tag> etc. Instead, use the <tag>space/</tag> (see <ptr target="#extra-space"/>). If something is placed on the left, no <tag>rend="left"</tag> is necessary.</p>
+				<p><hi rend="bold">Also Note:</hi> Please don't use <att>rend</att> plus values like "<val>left</val>", "<val>right</val>", and "<val>center</val>" to position things horizontally on the page. Instead, use the <tag>space/</tag> for such positioning (see <ptr target="#extra-space"/>). Additionally, if something is placed on the left, no <att>rend</att> with a value of "<val>left</val>" is necessary.</p>
 
 				
                 <p>Definitions of the elements used above are: <specList>
@@ -884,7 +884,7 @@ contained within a <gi>salute</gi> tag and any signature within a <gi>signed</gi
             <div xml:id="word-division">
                 <head>A Word Broken Up Over Two Lines</head>
                 <p>Use the <gi>w</gi> element to mark words that Livingstone breaks up over two
-                    lines and use <tag>seg type="hyphen"</tag> any associated hyphens or similar symbols.
+                    lines and use <tag>seg type="hyphen"</tag> to mark any associated hyphens or similar symbols.
 					You should also add the <att>break</att> attribute with the value of
                     "<val>no</val>" to the <tag>lb/</tag> that falls between the two halves of
                     the word. For LEAP materials the assumed value for the <att>break</att>
@@ -894,38 +894,39 @@ contained within a <gi>salute</gi> tag and any signature within a <gi>signed</gi
                     two words.</p>
                 <p>Livingstone's use of hyphens is erratic. Sometimes he hyphenates a word at the
                     end of the first line, sometimes at the beginning of the second, sometimes in
-                    both places, sometimes in neither. Sometimes he also uses "=" (i.e., the equal sign) in place of a hyphen</p>
+                    both places, sometimes in neither. Sometimes he also uses "=" (i.e., the equal sign) in place of a hyphen.</p>
                 <p>We code each of these instances in the same way, but we also always supply a
                     hyphen at the end of the line if Livingstone himself has failed to provide it. </p>
                 <p><label>Example #1 (no hyphen at all)</label>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
                         <lb/>I look on the drove they brought <w>un<supplied><seg type="hyphen">-</seg></supplied>
                             <lb break="no"/>chained</w> with a sort of pleasure after </egXML>
                 </p>
                 <p><label>Example #2 (hyphen only in first line)</label>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
                         <lb/>by one of <persName>Dugumbe</persName>'s people after <w>finish<seg type="hyphen">-</seg>
                                 <lb break="no"/>ing</w> a piece of work = said he was tired
                     </egXML>
                 </p>
                 <p><label>Example #3 (hyphen only in second line)</label>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
                         <lb/>sorely needed to be employed <w>him<supplied>-</supplied>
                             <lb break="no"/><seg type="hyphen">-</seg>self</w> in something else than penny </egXML>
                 </p>
                 <p><label>Example #4 (hyphen in both lines)</label>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
                         <lb/>by which the irresponsible <w>con<seg type="hyphen">-</seg> 
                             <lb break="no"/><seg type="hyphen">-</seg>clave</w> brought the Indian command </egXML>
                 </p>
                 <p><label>Example #5 (equal sign instead of hyphen)</label>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
                         <lb/>went to the <w>vil<seg type="hyphen">=</seg> 
                             <lb break="no"/>lage</w></egXML>
                 </p>
                 <p>Definitions of the elements used above are: <specList>
                         <specDesc key="w"/>
                         <specDesc key="lb" atts="break"/>
+						<specDesc key="seg" atts="type"/>
                     </specList>
                 </p>
             </div>
@@ -948,15 +949,15 @@ contained within a <gi>salute</gi> tag and any signature within a <gi>signed</gi
                         "<val>vertical</val>", but the default assumption in LEAP is that extra space is
                     horizontal so this does not need to be marked.</p>
 
-				<p>To position things horizontally on the page, use variants of the <tag>space/</tag> tag: 
+				<p>To position things horizontally on the page, use variants of the <tag>space/</tag> tag as follows: 
 				
 				<egXML xmlns="http://www.tei-c.org/ns/Examples"><space extent="1" unit="words"/></egXML>
 				and
 				<egXML xmlns="http://www.tei-c.org/ns/Examples"><space extent="1" unit="chars"/></egXML>
 				
-				Position the element roughly using the "words" variant, then fine-tune with "chars".</p>
+				Position the element roughly using the "<val>words</val>" variant (and, of course, change the value of <att>extent</att> as necessary), then fine-tune with "<val>chars</val>".</p>
 
-				<p>The only exception for this rule is <gi>milestone</gi>, where you can use <tag>rend="center"</tag> and <tag>rend="right"</tag> to position shorter lines (e.g., "half-line", "quarter-line", etc.) across the page.</p>
+				<p>The only exception for this rule is <gi>milestone</gi>, where you can use <att>rend</att> with values of "<val>center</val>" and "<val>right</val>" to position shorter lines (e.g., "<val>half-line</val>", "<val>quarter-line</val>", etc.) across the page.</p>
 
                 <p>Definitions of the elements used above are: <specList>
                         <specDesc key="space" atts="extent unit"/>
@@ -1003,7 +1004,6 @@ contained within a <gi>salute</gi> tag and any signature within a <gi>signed</gi
                     <p>Definitions of the elements used above are: <specList>
 						<specDesc key="pb"/>
 						<specDesc key="lb"/>
-                        <specDesc key="space"/>
                     </specList>
                     </p>
                 </div>
@@ -1583,7 +1583,7 @@ April <lb/>1866</date></note> alone but other nations feel</egXML>
 				<p>However, if the reference is primarily to an occupation rather than a title, use <tag>term type="occupation"</tag>:
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve"><persName>Mboura</persName> is the <term type="occupation">Sultan</term></egXML>
 					For further information on tagging occupations, see <ptr target="#occupations"/>.</p>
-                <p><hi rend="bold">Please note: </hi> in the context of names titles such as Dr., Mrs., and the like do not need to
+                <p><hi rend="bold">Please note: </hi> In the context of names, titles such as Dr., Mrs., and the like do not need to
                         be expanded. Likewise any possessive marker ('s) should be left outside the
                         <gi>persName</gi> tag whenever possible.</p>
                 <p>Definitions of the elements used above are: <specList>
