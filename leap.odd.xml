@@ -1446,7 +1446,7 @@ April <lb/>1866</date></note> alone but other nations feel</egXML>
                     include: "<val>blot</val>", "<val>fading</val>", "<val>hole</val>", "<val>illegible</val>",
                         "<val>overwriting</val>", and "<val>stain</val>". </p>
                 <p>The value of the <att>extent</att> attribute is always an approximation.</p>
-                <p>Note: For coding manuscript damage that spans more than a few lines of text, please consult the project team.</p>
+                <p><hi rend="bold">Note:</hi> For coding manuscript damage that spans more than a few lines of text, please consult the project team.</p>
                 <p>Definitions of the elements used above are: <specList>
                         <specDesc key="gap" atts="agent extent unit"/>
                     </specList>
@@ -1465,7 +1465,7 @@ April <lb/>1866</date></note> alone but other nations feel</egXML>
                     <eg>He saw man</eg>
                     <label rend="italic">Marked up:</label>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">he saw <supplied cert="high">the</supplied> man</egXML></p>
-				<p><hi rend="bold">Important Note:</hi> You should be <hi rend="underline">very conservative</hi> in your use of the <gi>supplied</gi> tag and only supply text of which you are 100% certain. Otherwise, use <tag>gap/</tag>. In other words, avoid guessing at Livingstone's meaning unnecessarily.</p>
+				<p><hi rend="bold">Important Note:</hi> You should be <hi rend="underline">very conservative</hi> in your use of the <gi>supplied</gi> tag and only supply text of which you are 100% certain. Otherwise, use <tag>gap/</tag>. In other words, avoid guessing at Livingstone's meaning unnecessarily and supply words for clarification only when absolutely essential.</p>
                 <p><hi rend="bold">Note:</hi> The <gi>supplied</gi> tag is never nested in the <gi>gap</gi> tag.
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">he saw <gap agent="damage" extent="3" unit="letters"/><supplied cert="high">the</supplied> man</egXML>
                 </p>
