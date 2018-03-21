@@ -897,31 +897,31 @@ contained within a <gi>salute</gi> tag and any signature within a <gi>signed</gi
                     both places, sometimes in neither. Sometimes he also uses "=" (i.e., the equal sign) in place of a hyphen.</p>
                 <p>We code each of these instances in the same way, but we also always supply a
                     hyphen at the end of the line if Livingstone himself has failed to provide it. </p>
-                <p><label>Example #1 (no hyphen at all)</label>
+                <p><label>Example #1 (no hyphen at all):</label>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
-                        <lb/>I look on the drove they brought <w>un<supplied><seg type="hyphen">-</seg></supplied>
-                            <lb break="no"/>chained</w> with a sort of pleasure after </egXML>
+<lb/>I look on the drove they brought <w>un<supplied><seg type="hyphen">-</seg></supplied>
+<lb break="no"/>chained</w> with a sort of pleasure after </egXML>
                 </p>
-                <p><label>Example #2 (hyphen only in first line)</label>
-                    <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
-                        <lb/>by one of <persName>Dugumbe</persName>'s people after <w>finish<seg type="hyphen">-</seg>
-                                <lb break="no"/>ing</w> a piece of work = said he was tired
+                <p><label>Example #2 (hyphen only in first line):</label>
+<egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
+<lb/>by one of <persName>Dugumbe</persName>'s people after <w>finish<seg type="hyphen">-</seg>
+<lb break="no"/>ing</w> a piece of work = said he was tired
                     </egXML>
                 </p>
-                <p><label>Example #3 (hyphen only in second line)</label>
+                <p><label>Example #3 (hyphen only in second line):</label>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
-                        <lb/>sorely needed to be employed <w>him<supplied>-</supplied>
-                            <lb break="no"/><seg type="hyphen">-</seg>self</w> in something else than penny </egXML>
+<lb/>sorely needed to be employed <w>him<supplied>-</supplied>
+<lb break="no"/><seg type="hyphen">-</seg>self</w> in something else than penny </egXML>
                 </p>
-                <p><label>Example #4 (hyphen in both lines)</label>
+                <p><label>Example #4 (hyphen in both lines):</label>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
-                        <lb/>by which the irresponsible <w>con<seg type="hyphen">-</seg> 
-                            <lb break="no"/><seg type="hyphen">-</seg>clave</w> brought the Indian command </egXML>
+<lb/>by which the irresponsible <w>con<seg type="hyphen">-</seg> 
+<lb break="no"/><seg type="hyphen">-</seg>clave</w> brought the Indian command </egXML>
                 </p>
-                <p><label>Example #5 (equal sign instead of hyphen)</label>
+                <p><label>Example #5 (equal sign instead of hyphen):</label>
                     <egXML xmlns="http://www.tei-c.org/ns/Examples" xml:space="preserve">
-                        <lb/>went to the <w>vil<seg type="hyphen">=</seg> 
-                            <lb break="no"/>lage</w></egXML>
+<lb/>went to the <w>vil<seg type="hyphen">=</seg> 
+<lb break="no"/>lage</w></egXML>
                 </p>
                 <p>Definitions of the elements used above are: <specList>
                         <specDesc key="w"/>
@@ -949,10 +949,10 @@ contained within a <gi>salute</gi> tag and any signature within a <gi>signed</gi
                         "<val>vertical</val>", but the default assumption in LEAP is that extra space is
                     horizontal so this does not need to be marked.</p>
 
-				<p>To position things horizontally on the page, use variants of the <tag>space/</tag> tag as follows: 
+				<p>To position things horizontally on the page, use variants of the <tag>space/</tag> tag with the <att>extent</att> and <att>unit</att> attributes as follows: 
 				
 				<egXML xmlns="http://www.tei-c.org/ns/Examples"><space extent="1" unit="words"/></egXML>
-				and
+				and (if necessary) in conjunction with
 				<egXML xmlns="http://www.tei-c.org/ns/Examples"><space extent="1" unit="chars"/></egXML>
 				
 				Position the element roughly using the "<val>words</val>" variant (and, of course, change the value of <att>extent</att> as necessary), then fine-tune with "<val>chars</val>".</p>
@@ -1779,7 +1779,7 @@ and <measure>1000 yards across</measure></measure></egXML>
                     
                 </div>
                 <div xml:id="occupations">
-                    <head>Occupation</head>
+                    <head>Occupations</head>
                     
                     <p>Use the <gi>term</gi> element with a <att>type</att> attribute with a value of "<val>occupation</val>" 
                         anytime an occupation of any sort is mentioned in the text.
