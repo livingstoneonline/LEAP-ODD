@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2018-03-21T17:13:59Z. .
+Schema generated from ODD source 2018-04-04T13:33:42Z. .
 TEI Edition: Version 3.3.0. Last updated on
 	31st January 2018, revision f4d8439
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.3.0/
@@ -593,6 +593,8 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">rendered as capitals</a:documentation>
                      <value>center</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">aligned in the center</a:documentation>
+                     <value>dashed</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">rendering is of a dashed line</a:documentation>
                      <value>diagonal</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">rendered diagonally</a:documentation>
                      <value>dotted-double-line</value>
