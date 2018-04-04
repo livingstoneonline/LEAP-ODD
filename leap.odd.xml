@@ -2642,6 +2642,9 @@ This hand belongs to Charles Livingstone.</handNote></egXML>
                                     <valItem ident="center">
                                         <desc>aligned in the center</desc>
                                     </valItem>
+                                    <valItem ident="dashed">
+                                        <desc>rendering is of a dashed line</desc>
+                                    </valItem>
                                     <valItem ident="diagonal">
                                         <desc>rendered diagonally</desc>
                                     </valItem>
