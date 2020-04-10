@@ -167,7 +167,7 @@ tei:add[@place='marginleft']//tei:lb" priority="200000"/>-->
   -->
   
   
-  <xsl:template name="beginDocumentHook">{\newline  Published by One More Voice (onemorevoice.org), \newline an imprint of Livingstone Online, 2019 \newline  \newline }
+  <xsl:template name="beginDocumentHook">{\newline  Published by One More Voice (onemorevoice.org), \newline an imprint of Livingstone Online, 2020 \newline  \newline }
     \let\cleardoublepage\clearpage
     <!--\setlength{\parskip}{pt}--> 
 <!-- set left align for tables -->
