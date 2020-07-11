@@ -2636,6 +2636,9 @@ This hand belongs to Charles Livingstone.</handNote></egXML>
                                     <valItem ident="below">
                                         <desc>rendered below the line</desc>
                                     </valItem>
+                                    <valItem ident="bold">
+                                        <desc>rendered in bold</desc>
+                                    </valItem>
                                     <valItem ident="caps">
                                         <desc>rendered as capitals</desc>
                                     </valItem>
