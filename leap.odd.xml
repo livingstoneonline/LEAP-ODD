@@ -2776,6 +2776,10 @@ This hand belongs to Charles Livingstone.</handNote></egXML>
                                         <desc>rendered in red</desc>
                                     </valItem>
 
+                                    <valItem ident="white">
+                                        <desc>rendered in white</desc>
+                                    </valItem>
+
                                     <valItem ident="yellow">
                                         <desc>rendered in yellow</desc>
                                     </valItem>
