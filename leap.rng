@@ -668,6 +668,8 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
                      <value>purple</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">rendered in purple</a:documentation>
                      <value>red</value>
+                     <value>white</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">rendered in white</a:documentation>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">rendered in red</a:documentation>
                      <value>yellow</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">rendered in yellow</a:documentation>
