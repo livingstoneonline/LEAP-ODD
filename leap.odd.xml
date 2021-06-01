@@ -2838,9 +2838,6 @@ This hand belongs to Charles Livingstone.</handNote></egXML>
                                     <valItem ident="bottom">
                                         <desc>at the foot of the page</desc>
                                     </valItem>
-                                    <valItem ident="end">
-                                        <desc>at the end of e.g. chapter or volume.</desc>
-                                    </valItem>
                                     <valItem ident="inline">
                                         <desc>within the body of the text.</desc>
                                     </valItem>
