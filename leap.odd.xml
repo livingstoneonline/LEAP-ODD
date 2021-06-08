@@ -2360,6 +2360,7 @@ This hand belongs to Charles Livingstone.</handNote></egXML>
                         <specDesc key="textClass"/>
                         <specDesc key="teiHeader"/>
                         <specDesc key="titleStmt"/>
+                        <specDesc key="xenoData"/>
                     </specList>
                 </p>
                 <p>
@@ -2546,7 +2547,7 @@ This hand belongs to Charles Livingstone.</handNote></egXML>
                         keywords langUsage language licence listChange listPrefixDef notesStmt
                         prefixDef principal profileDesc projectDesc publicationStmt rendition
                         revisionDesc sourceDesc styleDefDecl tagsDecl taxonomy textClass teiHeader
-                        titleStmt"/>
+                        titleStmt xenoData"/>
 
                     <moduleRef key="linking" include="ab anchor link linkGrp seg"/>
 
